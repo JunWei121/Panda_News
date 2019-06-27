@@ -1,0 +1,34 @@
+[
+  {
+    "id" : 1 ,
+    "uname" : "admin" ,
+    "upass" : "" ,
+    "role" : "系统管理员" ,
+    "createTime" : "2019-06-03 12:12:12" ,
+    "state" : 1
+  } ,
+  {
+    "id" : 2 ,
+    "uname" : "sys" ,
+    "upass" : "" ,
+    "role" : "系统管理员" ,
+    "createTime" : "2019-06-03 12:12:12",
+    "state" : 1
+  },
+  {
+  "id" : 3 ,
+  "uname" : "xz" ,
+  "upass" : "" ,
+  "role" : "资讯管理员" ,
+  "createTime" : "2019-06-03 12:12:12",
+    "state" : 0
+},
+  {
+    "id" : 4 ,
+    "uname" : "hr" ,
+    "upass" : "" ,
+    "role" : "hr管理员" ,
+    "createTime" : "2019-06-03 12:12:12",
+    "state" : 1
+  }
+]

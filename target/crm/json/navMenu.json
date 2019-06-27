@@ -1,0 +1,83 @@
+[
+  {
+    "text": "<span class='glyphicon glyphicon-th-list'/>&nbsp;系统管理",
+    "backColor": "#428BCA",
+    "color": "#FFF",
+    "selectable": false,
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;角色管理",
+        "href": "./sys/roleManger.html"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-list-alt'/>&nbsp;权限管理",
+        "href": "/sys/roleManger"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;系统用户管理",
+        "href": "./sys/userManger.html"
+      }
+    ]
+  },
+  {
+    "text": "<span class='glyphicon glyphicon-inbox'/>&nbsp;职工管理",
+    "state": {
+      "expanded":false
+    },
+    "backColor": "#428BCA",
+    "color": "#FFF",
+    "selectable": false,
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;教工管理",
+        "href": "./sys/teacherManger.html"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;职工管理",
+        "href": "/sys/roleManger"
+      }
+    ]
+  },
+  {
+    "text": "<span class='glyphicon glyphicon-tower'/>&nbsp;班级及幼儿信息管理",
+    "state": {
+      "expanded":false
+    },
+    "backColor": "#428BCA",
+    "color": "#FFF",
+    "selectable": false,
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;班级管理",
+        "href": "/sys/roleManger"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;幼儿及家长管理",
+        "href": "/sys/roleManger"
+      }
+    ]
+  },
+  {
+    "text": "<span class='glyphicon glyphicon-info-sign'/>&nbsp;资讯管理",
+    "state": {
+      "expanded":false
+    },
+    "backColor": "#428BCA",
+    "color": "#FFF",
+    "selectable": false,
+    "nodes": [
+      {
+        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;校园活动资讯管理",
+        "href": "/sys/roleManger"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;学生风采资讯管理",
+        "href": "/sys/roleManger"
+      },
+      {
+        "text": "<span class='glyphicon glyphicon-zoom-in'/>&nbsp;食谱管理",
+        "href": "/sys/roleManger"
+      }
+    ]
+  }
+]

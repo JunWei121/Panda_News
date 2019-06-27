@@ -1,0 +1,41 @@
+{
+  "total" : 18 ,
+  "rows" : [
+    {
+      "id" : 1 ,
+      "tid" : "t010101" ,
+      "tname" : "张三" ,
+      "gender" : "男" ,
+      "email" : "zs@163.com" ,
+      "mobile" : "13867898765" ,
+      "hiredate" : "2012-12-12"
+    },
+    {
+      "id" : 2 ,
+      "tid" : "t010102" ,
+      "tname" : "张三2" ,
+      "gender" : "男" ,
+      "email" : "zs@163.com" ,
+      "mobile" : "13867898765" ,
+      "hiredate" : "2012-12-12"
+    } ,
+    {
+      "id" : 3 ,
+      "tid" : "t010103" ,
+      "tname" : "张三3" ,
+      "gender" : "男" ,
+      "email" : "zs@163.com" ,
+      "mobile" : "13867898765" ,
+      "hiredate" : "2012-12-12"
+    } ,
+    {
+      "id" : 4 ,
+      "tid" : "t010104" ,
+      "tname" : "张三4" ,
+      "gender" : "男" ,
+      "email" : "zs@163.com" ,
+      "mobile" : "13867898765" ,
+      "hiredate" : "2012-12-12"
+    }
+  ]
+}

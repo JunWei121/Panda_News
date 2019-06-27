@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+    <!-- 配置处理器handle 响应/firstController <bean name="/firstController" class="com.demo.controller.FirstController"/> -->
+
+    <!-- 开启包扫描 扫描注解 -->
+    <context:component-scan base-package="com.demo.controller"/>
+
+    <!-- spring 4.0以上 都可以不配置 -->
+    <!-- 配置映射器 以name 为 url 进行查找 -->
+    <!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
+    <!-- <!一处理器适配器，配置对处理器中 handleRequest() 方法的调用 -->
+    <!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/> -->
+
+    <!-- 配置静态资源访问 此路径将不被控制器拦截 location指定放行的目录 具体到某文件夹 mapping匹配全路径 /** 指路径下子目录和文件 -->
+
+    <!-- 配置注解 驱动 -->
+    <mvc:annotation-driven/>
+
+    <!-- 加载静态资源 -->
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/fonts/" mapping="/fonts/**"/>
+    <mvc:resources location="/images/" mapping="/images/**"/>
+    <mvc:resources location="/json/" mapping="/json/**"/>
+
+
+
+    <!-- 配置拦截器 -->
+    <!-- <mvc:interceptors> 直接在mvc:interceptors 定义bean 表示拦截所有请求 <bean class="com.demo.intercept.CustomIntercept"/>
+        <mvc:interceptor> <mvc:mapping path="/**" /> <bean class="com.demo.intercept.LoginIntercept"
+        /> </mvc:interceptor> </mvc:interceptors> -->
+
+
+    <!-- 视图解析器 用于自动补充前缀和后缀 视图名只需填写xx -->
+    <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/pages/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
+
+
+    <!-- 配置文件上传解析器 -->
+    <!-- 	<bean id="multipartResolver"
+            class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+            <property name="defaultEncoding" value="UTF-8" />
+        </bean> -->
+
+    <!-- 自定义类型转换器配置 -->
+    <!-- <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        注入自定的转换类依赖 <property name="converters"> <set> <bean class="com.demo.convert.DateConverter"></bean>
+        </set> </property> </bean> -->
+
+    <!-- 自定类型Formatter转换器配置 只能转换日期 -->
+    <!-- <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        注入依赖 <property name="formatters"> <set> <bean class="com.demo.convert.DateFormatter"
+        /> </set> </property> </bean> -->
+</beans>

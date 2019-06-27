@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--    适配手机-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--    先放jquery，因为依赖jQuery-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-treeview.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $.getJSON('json/navMenu.json', function (navMenuDate) {
+                $("#tree").treeview({
+                    data: navMenuDate,
+                    selectedBackColor: '#FF7F24',
+                    collapseIcon: '', //设置列表树可收缩节点的图标。
+                    expandIcon: '',//设置列表树可展开节点的图标。
+                    selectedIcon:"glyphicon glyphicon-chevron-right",
+                    onNodeSelected: function (event, data) {
+                        var parent = $("#tree").treeview("getNode", data.parentId);//获取父节点
+
+                        /*修改导航路径*/
+                        $("#navPath").html(
+                            "<li>" + parent.text + "</li>" +
+                            "<li>" + data.text + "</li>"
+                        );
+
+                        /*修改对应框架的内容*/
+                        $("#contentFrame").attr("src",data.href);
+                    }
+                });
+            })
+        })
+
+
+    </script>
+    <title>后台管理</title>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Top-->
+    <div class="row">
+        <div class="col-md-12 page-header">
+            <h1 style="float: left">精武小镇幼儿园
+                <small>管理系统</small>
+            </h1>
+            <div style="float: right;margin-right: 50px">
+                <span class="glyphicon glyphicon-time"></span>
+                <span id="loginTime">2019-06-13 20:26</span>&emsp;
+                <span class="glyphicon glyphicon-user"></span>
+                <span id="loginUser">欢迎您,<b id="admin">admin</b></span>&emsp;
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-off"></span>&nbsp;注销
+                </button>
+            </div>
+        </div>
+
+        <!-- Botton-->
+        <div class="row" style="margin-right: 10px;margin-left: 10px">
+            <!--navMenu-->
+            <div class="col-md-3">
+                <div id="tree"></div>
+            </div>
+            <!--navcontent-->
+            <div class="col-md-9">
+                <!--navPath-->
+                <ol id="navPath" class="breadcrumb">
+                    <li><a href="#">首页</a></li>
+                </ol>
+
+                <!--iframe-->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="contentFrame" class="embed-responsive-item" src="pages/iframe1.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

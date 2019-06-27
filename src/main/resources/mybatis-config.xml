@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 起别名 别名不区分大小写 -->
+	<typeAliases>
+		<package name="com.demo.entity" />
+		<package name="com.demo.pojo" />
+	</typeAliases>
+</configuration>

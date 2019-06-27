@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+        	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <!-- 读取db.properties -->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <!-- 驱动 -->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <!-- url -->
+        <property name="url" value="${jdbc.url}"/>
+        <!-- 账号 -->
+        <property name="username" value="${jdbc.username}"/>
+        <!-- 密码 -->
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 最大连接数 -->
+        <property name="maxTotal" value="${jdbc.maxTotal}"/>
+        <!-- 最大空闲连接数 -->
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <!-- 初始化连接数 -->
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+    </bean>
+
+
+    <!-- 事务管理器 依赖于数据源dataSource -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--  配置事务传播行为 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>  <!-- 读取数据隔离级别为只读 -->
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="select*" read-only="true"/>
+            <tx:method name="*"/> <!-- 其他操作使用默认隔离级别 -->
+        </tx:attributes>
+    </tx:advice>
+    <!-- 配置事务切点，并把事务切点和事务属性关联起来 -->
+    <aop:config>
+        <aop:pointcut expression="execution(* com.demo.service.*.*(..))" id="txPointcut"/>
+        <!-- 配置切点 修改service所在的包 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+    <!-- 开启事务注解 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- 扫描service -->
+    <context:component-scan base-package="com.demo.service"/>
+
+    <!-- 配置mybatis工厂 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 注入数据源依赖 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 指定mybatis核心配置文件 -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+
+    <!-- 基于mapper接口开发 -->
+    <!-- <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        注入mapper接口 <property name="mapperInterface" value="com.demo.mapper.UserMapper"/>
+        注入SqlSessionFactory <property name="SqlSessionFactory" ref="SqlSessionFactory"
+        /> </bean> -->
+
+    <!-- 基于Mapper代理开发（(扫描包) -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 配置基础包路径 多个包可以用分号或者逗号隔开 -->
+        <property name="basePackage" value="com.demo.dao"/>
+    </bean>
+</beans> 
