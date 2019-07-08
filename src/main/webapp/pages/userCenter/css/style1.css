@@ -1,0 +1,96 @@
+/* reset */
+.favourites ul li{
+    display: inline-block;
+    list-style-type: none;
+    background: #fff;
+    width: 30%;
+    float: left;
+	position: relative;
+    border-right:1px solid #D6D2D2;
+	}
+
+.favourites ul li a{
+    text-decoration: none;
+    color: #CF9ED9;
+    font-size: 15px;
+    display: block;
+    height: 50px;
+    padding-top: 32px;
+	}
+.favourites ul li a.eye{
+background: url(../images/image-sprite.png) no-repeat 45px 8px;
+}
+
+.favourites ul li a.video{
+background: url(../images/image-sprite.png) no-repeat -60px 8px;
+}
+
+.favourites ul li a.favou{
+background: url(../images/image-sprite.png) no-repeat -160px 8px;
+}
+
+.facebook ul {
+	margin:0;
+	padding:0;
+text-align:center;
+}
+.facebook ul li {
+	list-style-type:none;
+	display:inline-block;
+	margin:0 1px;
+}
+.facebook ul li a{
+	width:30px;
+	height:30px;
+	display:block;
+}
+.facebook ul li a.icon1{
+background:url(../images/social.png) no-repeat 0px 0px;	
+}
+.facebook ul li a.icon2{
+background:url(../images/social.png) no-repeat -30px 0px;	
+}
+.facebook ul li a.icon3{
+background:url(../images/social.png) no-repeat -60px 0px;	
+}
+.facebook ul li a.icon4{
+background:url(../images/social.png) no-repeat -90px 0px;	
+}
+.facebook ul li a.icon5{
+background:url(../images/social.png) no-repeat -120px 0px;	
+}
+.facebook ul li a:hover{	
+    opacity: .5;
+}
+.follow{
+	text-align:center;
+    width: 38%;
+	margin:0 auto;
+}
+.follow a{
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #fff;
+    background: #8438A2;
+    border-bottom: 3px solid #B55BD8;
+    display: block;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.follow a:hover{
+    background: #B55BD8;	
+    border-bottom: 3px solid #8438A2;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.facebook {
+    margin-bottom: 18px;
+}
+

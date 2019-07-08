@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>panda个人中心</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- -->
+    <link rel="stylesheet" href="../bootstrap/css/fileinput.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootbox.min.js"></script>
+    <script src="../bootstrap/js/fileinput.js"></script>
+    <script src="../bootstrap/js/fileinput_locale_zh.js"></script>
+    <script>
+
+        $(function () {
+            $("#modalBtnCancel").click(function () {
+                $("#upPhotoForm")[0].reset();
+                $("#upPhoto").modal("hide");
+            });
+            $("#photoDel").click(function () {
+                $("#upPhotoForm")[0].reset();
+            });
+
+
+            $("#modalBtnCancel1").click(function () {
+                $("#upUserDataForm")[0].reset();
+                $("#upUserData").modal("hide");
+
+            });
+            $("#userDel").click(function () {
+                $("#upUserDataForm")[0].reset();
+
+            });
+
+            $("#modalBtnCancel2").click(function () {
+                $("#upUserRenzhengForm")[0].reset();
+                $("#upUserRenzheng").modal("hide");
+
+            });
+            $("#RenzhengDel").click(function () {
+                $("#upUserRenzhengForm")[0].reset();
+
+            });
+
+
+        })
+    </script>
+
+    <!--<script>
+    	$(function () { 
+    		$('#upPhoto').on('modalBtnUp.bs.modal', function () {
+      alert('上传成功！');})
+   });
+    </script>-->
+
+</head>
+
+<body background="images/1680_1050_201605220350453593303.jpg"
+      style="background-attachment: fixed;background-repeat: no-repeat;">
+<!--
+    作者：offline
+    时间：2019-07-02
+    描述：页面内容
+-->
+<div>
+    <h1 class="title" id="character" align="center">panda个人中心</h1>
+    <script type="text/javascript">
+
+        var i = 0;
+        setInterval('changeColor()', 500);
+
+        function changeColor() {
+            var div = document.getElementById('character'); //获得div元素
+            var colorArr = ['#8A2BE2', '#DEB887', '#7FFF00', '#008B8B', '#FF1493']; //建立颜色库
+            if (i == colorArr.length) {
+                i = 0;
+            } else {
+                div.style.color = colorArr[i++ % colorArr.length]; //循环颜色
+            }
+        }
+    </script>
+</div>
+<!--页面主体-->
+<!--左侧个人信息显示-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+            <div style="background-color: #B55BD8;">
+                <div style="height: 20px;"></div>
+                <!--头像-->
+                <div align="center">
+                    <img src="images/img3.png" id="showPhoto" height="190" width="190" class="img-circle"
+                         data-toggle="modal" data-target="#upPhoto"/>
+                </div>
+                <div align="center" style="padding-top: 10px;">
+                    <b><span id="showLoginUser">user</span></b>
+
+                </div>
+                <div align="center" style="padding-top: 10px;" id="state">
+                    <span class="glyphicon glyphicon-ok-sign" style="color: #117A65;"></span>
+                    <b><span style="color: #117A65;">已认证</span></b>
+                </div>
+                <div>
+                    <h3 align="center">欢迎登陆panda新闻网</h3>
+                </div>
+                <div style="padding-top: 10px;">
+                    <button class="btn" id="showUserData" data-toggle="modal" data-target="#upUserData"
+                            style="margin-left: 38%;">修改用户信息
+                    </button>
+                </div>
+
+                <div class="bar" align="center" style="padding-top: 20px;" id="date">
+
+                </div>
+                <!--认证部分结束-->
+                <div align="center" style="margin-top: 30px;">
+                    <div class="favourites">
+                        <ul>
+
+
+                            <li><a class="eye" href="../User-Center_news.html" target="iframe_a">发布de新闻</a></li>
+                            <li><a class="video" href="../User-Center_comment.html" target="iframe_a">发布de评论</a></li>
+                            <li><a class="favou" id="validate" data-toggle="modal"
+                                   data-target="#upUserRenzheng">身份认证</a>
+                            </li>
+
+                            <div class="clear"></div>
+                        </ul>
+
+                    </div>
+                </div>
+                <div align="center" style="color: #B2DBA1; padding-top: 80px;">
+                    <h4>panda新闻网感谢您的大力支持，我们会更加努力。</h4>
+                    <h4>如有需要，请关注我们！</h4>
+                </div>
+                <div class="facebook" style="margin-top: 25px;">
+                    <ul>
+                        <li><a class="icon1" href="#"></a></li>
+                        <li><a class="icon2" href="#"></a></li>
+                        <li><a class="icon3" href="#"></a></li>
+                        <li><a class="icon4" href="#"></a></li>
+                        <li><a class="icon5" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <a href="../index.html">返回首页</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="images/1680_1050_201605220350453593303.jpg"
+                        name="iframe_a"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" style="margin-top: 100px;">
+        <p style="color: #27C5F2;" align="center">Copyright &copy; 2019.panda新闻网<a target="_blank" href=""></a></p>
+    </div>
+</div>
+<div class="modal fade" id="upPhoto">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--
+                作者：offline
+                时间：2019-06-16
+                描述：模态框头部
+            -->
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" id="photoDel">X</span>
+                </button>
+                <h3>更改头像</h3>
+            </div>
+            <!--
+                作者：offline
+                时间：2019-06-16
+                描述：模态框tou结束
+            -->
+            <div class="modal-body">
+                <form method="post" class="form-horizontal" id="upPhotoForm" enctype="multipart/form-data">
+                    <input id="userphoto" class="file" type="file" name="userphoto" multiple data-min-file-count="1">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="modalBtnCancel">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="upUserData">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" id="userDel">X</span>
+                </button>
+                <h3>更改个人信息</h3>
+            </div>
+
+
+            <div class="modal-body">
+                <form class="form-horizontal" id="upUserDataForm">
+                    <div class="form-group">
+                        <label for="inputUname" class="col-sm-offset-2 col-sm-2 control-label">账号</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="uname" class="form-control" id="inputUname" placeholder="登陆账号"/>
+                        </div>
+
+                        <label for="inputUpwd" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+                        <div class="col-sm-6">
+                            <input type="password" name="upwd" class="form-control" id="inputUpwd" placeholder="登陆密码"/>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="modalBtnCancel1">取消</button>
+                <button type="button" class="btn btn-info" id="modDateBtn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="upUserRenzheng">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--
+                作者：offline
+                时间：2019-06-16
+                描述：模态框头部
+            -->
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"
+                                                                               id="RenzhengDel">X</span></button>
+                <h3>用户认证</h3>
+            </div>
+            <!--
+                作者：offline
+                时间：2019-06-16
+                描述：模态框tou结束
+            -->
+            <div class="modal-body">
+                <form class="form-horizontal" id="upUserRenzhengForm">
+                    <div class="form-group">
+                        <label for="inputwhy" class="col-sm-2 control-label">认证原由</label>
+                        <div class="col-sm-10">
+
+                            <textarea name="vContent" class="form-control" id="inputwhy"
+                                      placeholder="请输入您的认证原由"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="modalBtnCancel2">取消</button>
+                <button type="button" class="btn btn-info" id="startVerify">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+
+    var isLogin = {
+        init: function () {
+            $("#upPhotoForm").attr("action", getRootPath() + "/upload.action");
+
+            $.post(getRootPath() + "/user/isLogin.action", function (data) {
+                if (data != null && data != "") {
+                    if (data.hPath != null && data.hPath != "") {
+                        $("#showPhoto").attr("src", data.hPath);
+                    }
+                    $("#showLoginUser").html("<h4><span class='glyphicon glyphicon-user'></span>" + data.uname + "</h4>");
+                    var ok = "<span class=\"glyphicon glyphicon-ok-sign\" style=\"color: #117A65;\"></span>\n" +
+                        "<b><span style=\"color: #117A65;\">已认证</span></b>";
+                    var no = "<span class=\"glyphicon glyphicon-remove-sign\" style=\"color: darkred;\"></span>\n" +
+                        "<b><span style=\"color: darkred;\">未认证</span></b>";
+                    $("#state").html(data.isVerify == 1 ? ok : no);
+                    $("#date").html("<h5>注册时间<span class='glyphicon glyphicon-time'>：" + data.uCreatetime + "</span></h5>");
+                    if (data.isVerify == 1) {
+                        $("#validate").attr("data-target", null);//禁用认证按钮
+                        $("#validate").click(function () {
+                            bootbox.alert("您已经完成认证！");
+                        })
+                    }
+
+
+                } else {
+                    bootbox.alert("您还没有登录!点击去登陆！", function () {
+                        window.location.href = getRootPath() + "/pages/loginindex.html";
+                    })
+                }
+            })
+        }
+    };
+
+    isLogin.init();
+
+
+    $("#modDateBtn").click(function () {
+
+        $.post(getRootPath() + "/user/modAccount.action", $("#upUserDataForm").serialize(), function (data) {
+            if (data == "OK") {
+                bootbox.alert("修改成功！");
+            } else if (data == "FAIL") {
+                bootbox.alert("修改失败，请重试！");
+            } else {
+                bootbox.alert("未登录！");
+            }
+        });
+        $("#upUserDataForm")[0].reset();
+        $("#upUserData").modal("hide");
+    });
+
+    $("#startVerify").click(function () {
+        $.post(getRootPath() + "/user/startVerify.action", $("#inputwhy").serialize(), function (data) {
+            if (data == "OK") {
+                bootbox.alert("提交成功！请等待审核！");
+            } else if (data == "FAIL") {
+                bootbox.alert("提交失败，请重试！");
+            } else {
+                bootbox.alert("未登录！");
+            }
+        });
+
+        $("#upUserRenzhengForm")[0].reset();
+        $("#upUserRenzheng").modal("hide");
+    })
+
+
+</script>
+</body>
+</html>

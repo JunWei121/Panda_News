@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="../css/bootstrap.dark.css">
+    <link rel="stylesheet" href="../css/bootstrap-panda.css">
+    <!--    先放jquery，因为依赖jQuery-->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/Chart.js"></script>
+</head>
+<body>
+<!--导航-->
+<nav class="navbar navbar-default">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="version" class="navbar-brand">Panda管理系统</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a id="admin"><span class="glyphicon glyphicon-home"></span>&emsp;后台首页</a>
+                </li>
+                <li><a id="houtai"><span
+                        class="glyphicon glyphicon-list-alt"></span>&emsp;管理菜单</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="sysUser" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="index.html"><span
+                                class="glyphicon glyphicon-screenshot"></span>&emsp;前台首页</a></li>
+                        <li><a id="role"><span class="glyphicon glyphicon-user"></span>&emsp;个人主页</a></li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a onclick="logout()"><span class="glyphicon glyphicon-off"></span>&emsp;退出</a></li>
+            </ul>
+        </div>
+        <!--导航-->
+
+    </div>
+</nav>
+<!--导航-->
+
+<!--警告框-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <h4>网站程序有漏洞，急需修复！</h4>
+                <p>当前版本程序(V1.0β)存在严重安全问题，容易造成攻击，请及时修复！</p>
+                <p>
+                    <button type="button" class="btn btn-danger">立即修复</button>
+                    <button type="button" class="btn btn-default" data-dismiss="alert">稍后处理</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">网站数据统计</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th height="55px">统计项目</th>
+                            <th>今日</th>
+                            <th>昨日</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">注册会员</th>
+                            <td>200</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">登录会员</th>
+                            <td>4100</td>
+                            <td>5112</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">发布新闻</th>
+                            <td>150</td>
+                            <td>110</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">评论次数</th>
+                            <td>1540</td>
+                            <td>4511</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">编辑次数</th>
+                            <td>50</td>
+                            <td>10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">新闻发布统计</div>
+                <div class="panel-body">
+                    <canvas id="canvas" class="col-md-12"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">团队留言板</div>
+                <div class="panel-body">
+                    <div class="col-md-7">
+                        <div class="media well">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object wh64" src="../images/a.png" alt="攻城狮">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">攻城狮</h4>
+                                技术小哥，今晚请把网站程序升级一下哈，现在的系统有漏洞，安全起见！
+                            </div>
+                        </div>
+                        <div class="media well">
+                            <div class="media-body text-right">
+                                <h4 class="media-heading">程序猿</h4>
+                                收到，今晚凌晨2点准时升级！
+                            </div>
+                            <div class="media-right">
+                                <a href="#">
+                                    <img class="media-object wh64" src="../images/b.png" alt="程序猿">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="media well">
+                            <div class="media-body text-right">
+                                <h4 class="media-heading">程序猿</h4>
+                                你先在站点发布一下通知哈！
+                            </div>
+                            <div class="media-right">
+                                <a href="#">
+                                    <img class="media-object wh64" src="../images/b.png" alt="程序猿">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="media well">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object wh64" src="../images/a.png" alt="攻城狮">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">攻城狮</h4>
+                                好嘞。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="text1">输入留言内容</label>
+                                <textarea class="form-control" id="text1" rows="5" cols="10"
+                                          placeholder="请输入留言内容"></textarea>
+                                <button type="submit" class="btn btn-default mar_t15">留言</button>
+                            </div>
+                        </form>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">团队联系手册</div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">站长(周星星)：<span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;13134848615
+                                    </li>
+                                    <li class="list-group-item">技术(酱爆)：<span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;13456127694
+                                    </li>
+                                    <li class="list-group-item">推广(达叔)：<span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;13457815482
+                                    </li>
+                                    <li class="list-group-item">客服(翠花)：<span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;13134567782&nbsp;&nbsp;<span
+                                            class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;028-888888
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Copyright&nbsp;©&nbsp;2019&nbsp;&nbsp;Panda Admin&nbsp;&nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+
+
+<script>
+    //请求后台传回的用户信息
+    var app = {
+        init: function () {
+            $.post(getRootPath() + "/sys/userInfo.action", function (data) {
+                $("#sysUser").html("<span class=\"glyphicon glyphicon-user\"></span>&nbsp;" + data.sname +
+                    "<span class=\"caret\"></span>");
+                $("#role").html("<span class=\"glyphicon glyphicon-education\"></span>&emsp;"+ data.rname);
+            });
+
+        }
+    };
+
+    app.init();
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+    function logout() {
+        bootbox.setDefaults("locale", "zh_CN");
+        bootbox.confirm("确定注销登陆吗?", function (result) {
+            if (result) {
+                window.location.href = getRootPath() + "/sys/logout.action";
+            }
+        });
+    }
+
+    $("#houtai").click(function () {
+        window.location.href = getRootPath() + "/sys/tohoutai.action";
+    });
+
+    $("#admin").click(function () {
+        window.location.href = getRootPath() + "/sys/toadmin.action";
+    });
+
+    $("#version").click(function () {
+        bootbox.alert({
+            message: "<br/><h3>Panda管理系统</h3><br/><strong>当前版本:1.0β</strong>",
+            // size: "small",
+            size: "small"
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.dark.css">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- 先引入jQuery的js文件，再引入bootstrap的js文件 -->
+    <script src="../js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap-table.css">
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script>
+        $(function () {
+            $("#roleTable").bootstrapTable({
+                url: getRootPath() + '/sys/role/loadRole.action', //必有属性
+                method: 'get',
+                striped: true,
+                toolbar: '#toolbar',
+                showRefresh: "true",  //显示舒心刷新按钮
+                // showToggle: "true", //显示格式切换按钮
+                showColumns: "true", //显示过滤按钮
+                columns: [   //必有属性
+                    {
+                        checkbox: true,
+                        formatter: function (value, row, index) {
+                            console.log(row.topstatus);
+                            if (row.rid == 1) { //禁止勾选系统管理员
+                                return {
+                                    disabled: true,
+                                }
+                            } else {
+                                return {
+                                    disabled: false,
+                                }
+                            }
+                            return value;
+                        }
+                    },
+                    {
+                        field: 'rid',
+                        title: '角色ID',
+                    },
+                    {
+                        field: 'rname',
+                        title: '角色名',
+                    },
+                    {
+                        field: 'oprSys',
+                        title: '系统管理',
+                        formatter: oprFormatter
+                    },
+                    {
+                        field: 'oprUser',
+                        title: '用户管理',
+                        formatter: oprFormatter
+                    },
+                    {
+                        field: 'oprNews',
+                        title: '新闻管理',
+                        formatter: oprFormatter
+                    },
+                    {
+                        field: 'oprComment',
+                        title: '评论管理',
+                        formatter: oprFormatter
+                    }
+                ]
+            });
+
+            function oprFormatter(value, row, index) {
+                return value == 1 ? "<b style='color: limegreen'>✔</b>" : "";
+            }
+
+
+        })
+
+
+    </script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>角色管理</h3>
+        </div>
+        <div class="panel-body">
+            <!--toolbar-->
+            <div id="toolbar">
+                <!--新增按钮-->
+                <button id="btnAdd" type="button" class="btn btn-default" data-toggle="modal" data-target="#addRole">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"/>新增
+                </button>
+                <!--删除按钮-->
+                <button id="btnDel" type="button" class="btn btn-default" data-toggle="modal" data-target="#delRole">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"/>删除
+                </button>
+            </div>
+
+
+            <!--RoleTable-->
+            <table id="roleTable"></table>
+        </div>
+
+
+        <!-- 添加-模态框 -->
+        <div class="modal fade" id="addRole" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">&times;
+                        </button>
+                        <h4 class="modal-title">添加新角色</h4>
+                    </div>
+                    <form class="form-horizontal" id="addForm" style="margin: 30px;">
+                        <div class="form-group">
+                            <label for="addRname" class="col-md-offset-2 col-md-2 control-label">角色名</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="rname" id="addRname"
+                                       placeholder="用户名">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roleOpr" class="col-md-offset-2 col-md-2 control-label">角色权限</label>
+                            <div class="col-md-8 checkbox" id="roleOpr">
+                                <div class="col-md-3">
+                                    <input id="oprSys" name="oprSys" value="1" type="checkbox">
+                                    系统管理
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="oprUser" name="oprUser" value="1" type="checkbox">
+                                    用户管理
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="oprNews" name="oprNews" value="1" type="checkbox">
+                                    新闻管理
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="oprComment" name="oprComment" value="1" type="checkbox">
+                                    评论管理
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group modal-footer">
+                            <div class="col-md-offset-4 col-md-6">
+                                <span id="returnMessage" class="glyphicon"></span>
+                                <button type="button" id="modalBtnAdd" class="btn btn-info">添加</button>
+                                <button id="modalBtnCancel" class="btn btn-default">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+    //添加角色事件
+    $("#modalBtnAdd").click(function () {
+        $.post(getRootPath() + "/sys/role/create.action",
+            $("#addForm").serialize(), function (data) {
+                if (data == "OK") {
+                    $("#addRole").modal("hide");
+                    $("#roleTable").bootstrapTable('refresh');
+                    bootbox.alert("添加成功");
+                } else if (data == "FAIL") {
+                    bootbox.alert("添加失败！");
+                } else {
+                    bootbox.alert("您没有该权限！");
+                }
+            });
+    });
+
+    //删除按钮事件
+    $("#btnDel").click(function () {
+        bootbox.setDefaults("locale", "zh_CN");
+        bootbox.confirm("是否确认删除?", function (result) {
+            if (result) {
+                var rows = $("#roleTable").bootstrapTable('getSelections');// 获得要删除的数据
+                if (rows.length == 0) {// rows 主要是为了判断是否选中，下面的else内容才是主要
+                    bootbox.alert("请先选择要删除的角色!");
+                    return;
+                } else {
+                    var ids = new Array();// 声明一个数组
+                    $(rows).each(function () {// 通过获得别选中的来进行遍历
+                        ids.push(this.rid);// cid为获得到的整条数据中的一列
+                    });
+                    // console.log(ids); //1,2,3
+                    deleteMs(ids);
+                }
+            }
+        });
+
+
+        function deleteMs(ids) {   //后台用 Integer[] ids 接收
+            $.ajax({
+                url: getRootPath() + "/sys/role/delete.action",
+                data: "ids=" + ids,
+                type: "post",
+                dataType: "text",
+                success: function (data) {
+                    console.log("s");
+                    if (data == "OK") {
+                        bootbox.alert("删除成功！");
+                        $('#roleTable').bootstrapTable('refresh');
+                    } else if (data == "FAIL") {
+                        bootbox.alert("删除失败！");
+                    } else {
+                        bootbox.alert("您没有该权限！");
+                    }
+                }
+            });
+        }
+
+
+    })
+
+</script>
+
+</body>
+</html>

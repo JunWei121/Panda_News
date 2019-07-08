@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--    适配手机-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.dark.css">
+    <link rel="stylesheet" href="../css/bootstrap-panda.css">
+    <!--    先放jquery，因为依赖jQuery-->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap-treeview.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        //获取项目url路径
+        function getRootPath() {
+            // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+            var curWwwPath = window.location.href;
+            // 获取当前相对路径： /springmvc/page/frame/test.html
+            var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+            var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+            // 获取带"/"的项目名，如：/springmvc
+            var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+            var rootPath = local + projectName;
+            return rootPath;
+        }
+
+        $(function () {
+            $.getJSON(getRootPath() + '/json/navMenu.json', function (navMenuDate) {
+                $("#tree").treeview({
+                    data: navMenuDate,
+                    selectedBackColor: '#FF7F24',
+                    collapseIcon: '', //设置列表树可收缩节点的图标。
+                    expandIcon: '',//设置列表树可展开节点的图标。
+                    selectedIcon: "glyphicon glyphicon-chevron-right",
+                    onNodeSelected: function (event, data) {
+                        var parent = $("#tree").treeview("getNode", data.parentId);//获取父节点
+
+                        /*修改导航路径*/
+                        $("#navPath").html(
+                            "<li>" + parent.text + "</li>" +
+                            "<li>" + data.text + "</li>"
+                        );
+
+                        /*修改对应框架的内容*/
+                        $("#contentFrame").attr("src", getRootPath() + data.href);
+
+                    }
+                });
+            })
+        });
+
+
+        function logout() {
+            bootbox.setDefaults("locale", "zh_CN");
+            bootbox.confirm("确定注销登陆吗?", function (result) {
+                if (result) {
+                    window.location.href = getRootPath() + "/sys/logout.action";
+                }
+            });
+        }
+
+
+    </script>
+    <title>后台管理</title>
+</head>
+<body>
+<!--导航-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="version" class="navbar-brand">Panda管理系统</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a id="admin"><span class="glyphicon glyphicon-home"></span>&emsp;后台首页</a></li>
+                <li class="active"><a id="houtai"><span
+                        class="glyphicon glyphicon-list-alt"></span>&emsp;管理菜单</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="sysUser" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="sysUser">
+                        <li><a href="index.html"><span
+                                class="glyphicon glyphicon-screenshot"></span>&emsp;前台首页</a></li>
+                        <li><a id="role"><span class="glyphicon glyphicon-user"></span>&emsp;个人主页</a></li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#bbs" onclick="logout()"><span class="glyphicon glyphicon-off"></span>&emsp;退出</a></li>
+            </ul>
+        </div>
+        <!--导航-->
+
+    </div>
+</nav>
+<!--导航-->
+
+
+<div class="container-fluid">
+    <!-- Top-->
+    <div class="row">
+        <!--         <img src="../images/female.jpg"> TODO 这里加图片-->
+    </div>
+
+    <!-- Botton-->
+    <div class="row" style="margin-right: 10px;margin-left: 10px">
+        <!--navMenu-->
+        <div class="col-md-3">
+            <div id="tree"></div>
+        </div>
+        <!--navcontent-->
+        <div class="col-md-9">
+            <!--navPath-->
+            <ol id="navPath" class="breadcrumb">
+                <li><a href="#">首页</a></li>
+            </ol>
+
+            <!--iframe-->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="contentFrame" class="embed-responsive-item" src="rolePage.action"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Copyright&nbsp;©&nbsp;2019&nbsp;&nbsp;Panda Admin&nbsp;&nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+</body>
+
+<script>
+    //请求后台传回的用户信息
+    var app = {
+        init: function () {
+            $.post(getRootPath() + "/sys/userInfo.action", function (data) {
+                $("#sysUser").html("<span class=\"glyphicon glyphicon-user\"></span>&nbsp;" + data.sname +
+                    "<span class=\"caret\"></span>");
+                $("#role").html("<span class=\"glyphicon glyphicon-education\"></span>&emsp;"+ data.rname);
+            });
+
+        }
+    };
+
+    app.init();
+
+    $("#houtai").click(function () {
+        window.location.href = getRootPath() + "/sys/tohoutai.action";
+    });
+
+    $("#admin").click(function () {
+        window.location.href = getRootPath() + "/sys/toadmin.action";
+    });
+
+    $("#version").click(function () {
+        bootbox.alert({
+            message: "<br/><h3>Panda管理系统</h3><br/><strong>当前版本:1.0β</strong>",
+            // size: "small",
+            size: "small"
+        });
+    });
+
+</script>
+
+</html>

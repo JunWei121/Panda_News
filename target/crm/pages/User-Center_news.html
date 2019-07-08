@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>发布过的新闻页</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-icons.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootbox.min.js"></script>
+
+</head>
+<body class="bg-light">
+
+<div class="main-container container mt-40" id="main-container">
+    <section class="section" id="listMyNews">
+        <div class="title-wrap">
+            <h1 class="section-title">您所发布过的新闻</h1>
+        </div>
+
+        <!--        TODO 显示新闻-->
+        <!--        <article class="entry post-list">-->
+        <!--            <div class="entry__img-holder post-list__img-holder">-->
+        <!--                <a href="single-post.html?newId=327" target="_top">-->
+        <!--                    <div class="thumb-container thumb-75">-->
+        <!--                        <img data-src="images/s1.jpg" class="entry__img lazyload" alt="">-->
+        <!--                    </div>-->
+        <!--                </a>-->
+        <!--            </div>-->
+
+        <!--            <div class="entry__body post-list__body">-->
+        <!--                <div class="entry__header">-->
+        <!--                    <h2 class="entry__title">-->
+        <!--                        <a href="single-post.html?newId=327" id="327" target="_top"></a>-->
+        <!--                    </h2>-->
+        <!--                    <ul class="entry__meta">-->
+        <!--                        <li class="entry__meta-author">-->
+        <!--                            <i class="ui-author"></i>-->
+        <!--                            <a href="#">DeoThemes</a>-->
+        <!--                        </li>-->
+        <!--                        <li class="entry__meta-date">-->
+        <!--                            <i class="ui-date"></i> 21 October, 2017-->
+        <!--                        </li>-->
+        <!--                        <li class="entry__meta-comments">-->
+        <!--                            <i class="ui-comments"></i>-->
+        <!--                            <a href="#">115</a>-->
+        <!--                        </li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
+        <!--                <div class="entry__excerpt">-->
+        <!--                    <p id="3277"></p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div style="padding-left: 90%;" class="btn-group">-->
+        <!--                <button class=" btn-color" type="button">修改</button>-->
+        <!--                <button class=" btn-color" type="button">删除</button>-->
+        <!--            </div>-->
+        <!--        </article>-->
+
+
+    </section>
+</div>
+
+<script>
+    //请求后台传回新闻
+    var app = {
+        init: function () {
+            $.get(getRootPath() + "/news/listMyNews.action?order=1", function (data) {
+                $.each(data, function (index, item) {
+                    $("#listMyNews").append("<article class=\"entry post-list\">\n" +
+                        "                        <div class=\"entry__img-holder post-list__img-holder\">\n" +
+                        "                            <a href=\"details.html?nid=" + item.nid + "\">\n" +
+                        "                                <div class=\"thumb-container thumb-75\">\n" +
+                        "                                    <img data-src=\"" + item.cover + "\" class=\"entry__img lazyload\" alt=\"\">\n" +
+                        "                                </div>\n" +
+                        "                            </a>\n" +
+                        "                        </div>\n" +
+                        "\n" +
+                        "                        <div class=\"entry__body post-list__body\">\n" +
+                        "                            <div class=\"entry__header\">\n" +
+                        "                                <h1 class=\"entry__title\">\n" +
+                        "                                    <a href=\"details.html?nid=" + item.nid + "\">" + item.title + "</a>\n" +
+                        "                                </h1>\n" +
+                        "                                <ul class=\"entry__meta\">\n" +
+                        "                                    <li class=\"entry__meta-author\">\n" +
+                        "                                        <i class=\"ui-author\"></i>\n" +
+                        "                                        <a href=\"#\">" + item.uname + "</a>\n" +
+                        "                                    </li>\n" +
+                        "                                    <li class=\"entry__meta-date\">\n" +
+                        "                                        <i class=\"ui-date\"></i> " + item.releaseTime +
+                        "                                    </li>\n" +
+                        "                                    <li class=\"entry__meta-comments\">\n" +
+                        "                                        <i class=\"ui-comments\"></i>\n" +
+                        "                                        <a href=\"#\">" + item.clicks + "</a>\n" +
+                        "                                    </li>\n" +
+                        "                                </ul>\n" +
+                        "                            </div></div>\n" +
+                        "            <div style=\"padding-left: 90%;\" class=\"btn-group\">\n" +
+                        "                <button class=\" btn-color\" type=\"button\" onclick='toEdit(" + item.nid + ")'>修改</button>\n" +
+                        "                <button class=\" btn-color\" type=\"button\" onclick='toDel(" + item.nid + ")'>删除</button>\n" +
+                        "            </div>" +
+                        "                    </article>")
+
+                })
+            });
+
+            toDel = function (nid) {
+                $.get(getRootPath() + "/news/deleteOne.action?nid=" + nid, function (data) {
+                    if (data == "OK") {
+                        bootbox.alert("删除成功！", function () {
+                            window.location.reload();
+                        })
+                    } else if (data == "FAIL") {
+                        bootbox.alert("此新闻不是您发布的！")
+                    } else {
+                        bootbox.alert("您还未登录！")
+                    }
+                })
+            };
+
+            toEdit = function (nid) {
+                window.open(getRootPath() + "/pages/edit.html?nid=" + nid);
+            };
+        }
+    };
+
+    app.init();
+
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+</script>
+
+</body>
+</html>

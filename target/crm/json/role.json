@@ -1,17 +1,26 @@
 [
   {
     "rid" : 1 ,
-    "id" : 1 ,
-    "rname" : "系统管理员"
+    "rname" : "系统管理员",
+    "oprSys":1,
+    "oprUser":1,
+    "oprNews":1,
+    "oprComment":1
   } ,
   {
-    "rid" : 2,
-    "id" : 2 ,
-    "rname" : "资讯管理员"
+    "rid" : 2 ,
+    "rname" : "账号管理员",
+    "oprSys":0,
+    "oprUser":1,
+    "oprNews":0,
+    "oprComment":0
   } ,
   {
     "rid" : 3 ,
-    "id" : 3 ,
-    "rname" : "hr管理员"
+    "rname" : "资讯管理员",
+    "oprSys":0,
+    "oprUser":0,
+    "oprNews":1,
+    "oprComment":1
   }
 ]

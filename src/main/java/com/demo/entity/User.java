@@ -7,60 +7,138 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
-    private Integer user_id;      //用户id
-    private String user_code;     //用户账号
-    private String user_name;     //用户名称
-    private String user_password; //用户密码
-    private Integer user_state;   //用户状态
+    private Integer uid;
+    private String uname;
+    private String upwd;
+    private String uCreatetime;
+    /**
+     * 头像地址
+     */
+    private String hPath;
+    /**
+     * 是否认证
+     */
+    private Integer isVerify;
 
-    public Integer getUser_id() {
-        return user_id;
+    /**
+     * 页码
+     */
+    private Integer pageNumber;
+    /**
+     * 每页数据数
+     */
+    private Integer pageSize;
+
+    /**
+     * 索引
+     */
+    private Integer pageIndex;
+
+
+
+    public User() {
     }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public String getUser_code() {
-        return user_code;
+    public Integer getUid() {
+        return uid;
     }
 
-    public void setUser_code(String user_code) {
-        this.user_code = user_code;
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUname() {
+        return uname;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
-    public String getUser_password() {
-        return user_password;
+    public String getUpwd() {
+        return upwd;
     }
 
-    public void setUser_password(String user_password) {
-        this.user_password = user_password;
+    public void setUpwd(String upwd) {
+        this.upwd = upwd;
     }
 
-    public Integer getUser_state() {
-        return user_state;
+    public String getuCreatetime() {
+        return uCreatetime;
     }
 
-    public void setUser_state(Integer user_state) {
-        this.user_state = user_state;
+    public void setuCreatetime(String uCreatetime) {
+        this.uCreatetime = uCreatetime;
+    }
+
+    public String gethPath() {
+        return hPath;
+    }
+
+    public void sethPath(String hPath) {
+        this.hPath = hPath;
+    }
+
+    public Integer getIsVerify() {
+        return isVerify;
+    }
+
+    public void setIsVerify(Integer isVerify) {
+        this.isVerify = isVerify;
+    }
+
+    public User(Integer uid, String uname, String upwd, String uCreatetime, String hPath, Integer isVerify, Integer pageNumber, Integer pageSize, Integer pageIndex) {
+        this.uid = uid;
+        this.uname = uname;
+        this.upwd = upwd;
+        this.uCreatetime = uCreatetime;
+        this.hPath = hPath;
+        this.isVerify = isVerify;
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+        this.pageIndex = pageIndex;
+    }
+
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public Integer getPageIndex() {
+        return pageIndex;
+    }
+
+    public void setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "user_id=" + user_id +
-                ", user_code='" + user_code + '\'' +
-                ", user_name='" + user_name + '\'' +
-                ", user_password='" + user_password + '\'' +
-                ", user_state=" + user_state +
+                "uid=" + uid +
+                ", uname='" + uname + '\'' +
+                ", upwd='" + upwd + '\'' +
+                ", uCreatetime='" + uCreatetime + '\'' +
+                ", hPath='" + hPath + '\'' +
+                ", isVerify=" + isVerify +
+                ", pageNumber=" + pageNumber +
+                ", pageSize=" + pageSize +
+                ", pageIndex=" + pageIndex +
                 '}';
     }
 }

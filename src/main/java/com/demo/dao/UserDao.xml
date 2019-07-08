@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.dao.UserDao">
+
+    <!--    基于Mapper代理开发（(扫描包)  命名空间和id 类型 要对应-->
+    <select id="selectListUser" parameterType="User" resultType="User">
+        SELECT * FROM user
+        <where>
+            <if test="uname !=null and uname != ''">
+                uname like concat ('%',#{uname},'%')
+            </if>
+            <if test="isVerify !=null">
+                and isVerify = #{isVerify}
+            </if>
+        </where>
+
+        ORDER BY uid asc
+        <if test="pageNumber != null and pageNumber !='' and pageSize !=null and pageSize != ''">
+            limit #{pageIndex} , #{pageSize}
+        </if>
+    </select>
+</mapper>

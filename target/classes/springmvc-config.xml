@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-	http://www.springframework.org/schema/aop
-	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
-	http://www.springframework.org/schema/tx
-	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-4.3.xsd
 	http://www.springframework.org/schema/mvc
@@ -39,26 +34,77 @@
     <mvc:resources location="/json/" mapping="/json/**"/>
 
 
-
-    <!-- 配置拦截器 -->
-    <!-- <mvc:interceptors> 直接在mvc:interceptors 定义bean 表示拦截所有请求 <bean class="com.demo.intercept.CustomIntercept"/>
-        <mvc:interceptor> <mvc:mapping path="/**" /> <bean class="com.demo.intercept.LoginIntercept"
-        /> </mvc:interceptor> </mvc:interceptors> -->
+    <!-- 配置拦截器   直接在mvc:interceptors 定义bean 表示拦截所有请求-->
+    <!--    <bean class="com.demo.intercept.CustomIntercept"/>-->
+    <!--    拦截sys路径下的请求-->
+    <!--    放行sys路径下的admin和login请求-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/sys/**"/>
+            <mvc:exclude-mapping path="/sys/admin.action"/>
+            <mvc:exclude-mapping path="/sys/login.action"/>
+            <mvc:exclude-mapping path="/sys/tohoutai.action"/>
+            <mvc:exclude-mapping path="/sys/toadmin.action"/>
+            <mvc:exclude-mapping path="/sys/loginState.action"/>
+            <mvc:exclude-mapping path="/sys/userInfo.action"/>
+            <bean class="com.demo.interceptor.SystemLoginInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/sys/admin/enable.action"/>
+            <mvc:mapping path="/sys/admin/disable.action"/>
+            <mvc:mapping path="/sys/admin/create.action"/>
+            <mvc:mapping path="/sys/admin/download.action"/>
+            <mvc:mapping path="/sys/role/create.action"/>
+            <mvc:mapping path="/sys/role/delete.action"/>
+            <bean class="com.demo.interceptor.OprSysInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/sys/user/enable.action"/>
+            <mvc:mapping path="/sys/user/disable.action"/>
+            <mvc:mapping path="/sys/user/download.action"/>
+            <mvc:mapping path="/sys/verify/enable.action"/>
+            <mvc:mapping path="/sys/verify/disable.action"/>
+            <bean class="com.demo.interceptor.OprUserInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/sys/sort/create.action"/>
+            <mvc:mapping path="/sys/sort/delete.action"/>
+            <mvc:mapping path="/sys/news/edit.action"/>
+            <bean class="com.demo.interceptor.OprNewsInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/sys/comment/delete.action"/>
+            <bean class="com.demo.interceptor.OprCommentInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/news/addComment.action"/>
+            <mvc:mapping path="/upload.action"/>
+            <mvc:mapping path="/user/modAccount.action"/>
+            <mvc:mapping path="/user/startVerify.action"/>
+            <mvc:mapping path="/news/listMyNews.action"/>
+            <mvc:mapping path="/news/releaseNews.action"/>
+            <mvc:mapping path="/news/edit.action"/>
+            <mvc:mapping path="/news/deleteOne.action"/>
+            <mvc:mapping path="/news/listMycomments.action"/>
+            <mvc:mapping path="/comment/deleteOne.action"/>
+            <bean class="com.demo.interceptor.UserInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 
     <!-- 视图解析器 用于自动补充前缀和后缀 视图名只需填写xx -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/pages/"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".html"/>
     </bean>
 
 
     <!-- 配置文件上传解析器 -->
-    <!-- 	<bean id="multipartResolver"
-            class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-            <property name="defaultEncoding" value="UTF-8" />
-        </bean> -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
 
     <!-- 自定义类型转换器配置 -->
     <!-- <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">

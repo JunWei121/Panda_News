@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.dao.VerifyDao">
+
+    <!--    基于Mapper代理开发（(扫描包)  命名空间和id 类型 要对应-->
+    <select id="selectListVerify" parameterType="verify" resultType="verify">
+        SELECT v.* , u.uname FROM verify v LEFT JOIN user u ON v.uid = u.uid
+        <where>
+            <if test="1==1">
+                isDeal = 1
+            </if>
+            <if test="uname !=null and uname != ''">
+                and uname like concat ('%',#{uname},'%')
+            </if>
+        </where>
+
+        ORDER BY vCreatetime desc
+        <if test="pageNumber != null and pageNumber !='' and pageSize !=null and pageSize != ''">
+            limit #{pageIndex} , #{pageSize}
+        </if>
+    </select>
+</mapper>

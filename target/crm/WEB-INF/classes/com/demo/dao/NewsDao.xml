@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.dao.NewsDao">
+
+    <!--    基于Mapper代理开发（(扫描包)  命名空间和id 类型 要对应-->
+    <select id="selectListNews" parameterType="News" resultType="News">
+        SELECT n.* , u.uname ,s.sortname FROM news n LEFT JOIN user u ON n.uid = u.uid
+        LEFT JOIN sort s ON n.sortId =s.sortId
+        <where>
+            <if test="uname !=null and uname != ''">
+                uname like concat ('%',#{uname},'%')
+            </if>
+            <if test="sortId !=null and sortId != ''">
+                and n.sortId = #{sortId}
+            </if>
+            <if test="uid !=null and uid != ''">
+                and n.uid = #{uid}
+            </if>
+            <if test="title !=null and title != ''">
+                and title like concat ('%',#{title},'%')
+            </if>
+        </where>
+        <choose>
+            <when test="order == 1">
+                ORDER BY n.releaseTime desc
+            </when>
+            <when test="order == 2">
+                ORDER BY n.clicks desc
+            </when>
+            <otherwise>
+                ORDER BY n.nid asc
+            </otherwise>
+        </choose>
+        <if test="pageNumber != null and pageNumber !='' and pageSize !=null and pageSize != ''">
+            limit #{pageIndex} , #{pageSize}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.CommentDao">
+
+    <!--    基于Mapper代理开发（(扫描包)  命名空间和id 类型 要对应-->
+    <select id="selectListComments" parameterType="Comment" resultType="Comment">
+        SELECT c.*,u.uname,n.Title FROM comment c LEFT JOIN user u ON c.uid = u.uid
+        LEFT JOIN news n ON c.nid = n.nid
+        <where>
+            <if test="uname !=null and uname != ''">
+                and uname like concat ('%',#{uname},'%')
+            </if>
+            <if test="title !=null and title != ''">
+                and title like concat ('%',#{title},'%')
+            </if>
+            <if test="nid !=null and nid != ''">
+                and c.nid = #{nid}
+            </if>
+            <if test="uid !=null and uid != ''">
+                and c.uid = #{uid}
+            </if>
+        </where>
+        order by c.cid asc
+        <if test="pageNumber != null and pageNumber !='' and pageSize !=null and pageSize != ''">
+            limit #{pageIndex} , #{pageSize}
+        </if>
+    </select>
+</mapper>

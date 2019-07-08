@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link href="../css/bootstrap.dark.css" rel="stylesheet">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- 先引入jQuery的js文件，再引入bootstrap的js文件 -->
+    <script src="../js/bootstrap.js"></script>
+
+    <link href="../css/bootstrap-table.css" rel="stylesheet">
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script>
+        $(function () {
+            $("#commentTable").bootstrapTable('destroy');//在初始化table之前，要将table销毁，否则会保留上次加载的内容
+            $("#commentTable").bootstrapTable({
+                url: getRootPath() + '/sys/comment/listComment.action', //必有属性
+                method: 'get',
+                // search: true,//是否启用搜索框 （你有兴趣自己可以试试）
+                toolbar: '#toolbar',
+                showRefresh: "true",  //显示舒心刷新按钮
+                showToggle: "true", //显示格式切换按钮
+                showColumns: "true", //显示过滤按钮
+                // 分页相关 ，如果分页，服務器端返回的数据需要包含有total属性和rows属性
+                pagination: true,		// 显示分页
+                pageNumber: 1,			// 初始化加载第一页
+                pageSize: 4,			// 每页4条数据
+                pageList: [4, 6, 9],	// 可以选择的每页数量
+                sidePagination: "server", //表示服务端请求分页数据
+
+                // 提交到Server的参数列表 ，
+                // 参数设定相关
+                queryParamsType: "undefined",  // undefined：提交到服务器端的参数自定义
+                queryParams: function (params) {
+                    // 参数params中自带 pageSize , pageNumber , sortName , sortOrder
+
+                    // 为params对象增加额外属性
+                    params.title = $.trim($("#title").val());
+                    params.uname = $.trim($("#uname").val());
+                    // console.log(params);
+                    return params;
+                },
+                //分页结束
+                columns: [   //必有属性
+                    {
+                        field: 'cid',
+                        title: '评论ID'
+                        // checkbox: true
+                    },
+                    {
+                        field: 'title',
+                        title: '所属新闻'
+                    },
+                    {
+                        field: 'uname',
+                        title: '发表用户'
+                    }, {
+                        field: 'creleaseTime',
+                        title: '发表日期时间'
+                    }, {
+                        field: 'cContent',
+                        title: '评论内容'
+                    },
+                    {
+                        title: '操作',
+                        formatter: operateFormatter
+                    }
+                ]
+            });
+
+            function operateFormatter(value, row, index) {
+                var del = '<button id="btnDel" type="button" class="edit btn btn-xs btn-danger" onclick="toDel(' + row.cid + ');">' +
+                    ' <span aria-hidden="true"/>删除' + '</button>';
+                return del;
+            }
+
+
+            //删除评论
+            toDel = function (cid) {
+                $.get(getRootPath() + "/sys/comment/delete.action?cid=" + cid, function (data) {
+                    if (data == "OK") {
+                        bootbox.alert("删除成功！");
+                        $("#commentTable").bootstrapTable('refresh');
+                    } else if (data == "FAIL") {
+                        bootbox.alert("操作失败！");
+                    } else {
+                        bootbox.alert("您没有此权限！");
+                    }
+                })
+            };
+
+
+            $("#toSearch").click(function () {
+                //搜索刷新数据表格
+                $("#commentTable").bootstrapTable('refresh');
+
+            });
+
+
+            //获取项目url路径
+            function getRootPath() {
+                // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+                var curWwwPath = window.location.href;
+                // 获取当前相对路径： /springmvc/page/frame/test.html
+                var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+                var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+                // 获取带"/"的项目名，如：/springmvc
+                var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+                var rootPath = local + projectName;
+                return rootPath;
+            }
+
+
+        })
+    </script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>评论管理</h3>
+        </div>
+
+
+        <div class="panel-body">
+            <!--toolbar-->
+            <div id="toolbar">
+                <!--搜索栏-->
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="title">所属新闻</label>
+                        <input class="form-control" id="title" name="title"
+                               placeholder="支持模糊搜索" type="text" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">发表用户</label>
+                        <input class="form-control" id="uname" name="uname"
+                               placeholder="支持模糊搜索" type="text" value=""/>
+                    </div>
+                    <button class="btn btn-primary" id="toSearch" type="button">搜索</button>
+                </form>
+            </div>
+
+
+            <!--Table-->
+            <table id="commentTable" style="table-layout: fixed;"></table>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>

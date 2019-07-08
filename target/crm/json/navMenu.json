@@ -6,77 +6,58 @@
     "selectable": false,
     "nodes": [
       {
-        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;角色管理",
-        "href": "./sys/roleManger.html"
+        "text": "<span class='glyphicon glyphicon-education'/>&nbsp;角色管理",
+        "href": "/sys/rolePage.action",
+        "state": {
+          "checked": true,
+          "selected": true
+        }
       },
       {
-        "text": "<span class='glyphicon glyphicon-list-alt'/>&nbsp;权限管理",
-        "href": "/sys/roleManger"
-      },
-      {
-        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;系统用户管理",
-        "href": "./sys/userManger.html"
+        "text": "<span class='glyphicon glyphicon-pawn'/>&nbsp;管理员管理",
+        "href": "/sys/adminPage.action"
       }
     ]
   },
   {
-    "text": "<span class='glyphicon glyphicon-inbox'/>&nbsp;职工管理",
+    "text": "<span class='glyphicon glyphicon-user'/>&nbsp;用户管理",
     "state": {
-      "expanded":false
+      "expanded": false
     },
     "backColor": "#428BCA",
     "color": "#FFF",
     "selectable": false,
     "nodes": [
       {
-        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;教工管理",
-        "href": "./sys/teacherManger.html"
+        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;用户管理",
+        "href": "/sys/userPage.action"
       },
       {
-        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;职工管理",
-        "href": "/sys/roleManger"
+        "text": "<span class='glyphicon glyphicon-ok-sign'/>&nbsp;认证管理",
+        "href": "/sys/verifyPage.action"
       }
     ]
   },
   {
-    "text": "<span class='glyphicon glyphicon-tower'/>&nbsp;班级及幼儿信息管理",
+    "text": "<span class='glyphicon glyphicon-text-color'/>&nbsp;资讯管理",
     "state": {
-      "expanded":false
+      "expanded": false
     },
     "backColor": "#428BCA",
     "color": "#FFF",
     "selectable": false,
     "nodes": [
       {
-        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;班级管理",
-        "href": "/sys/roleManger"
+        "text": "<span class='glyphicon glyphicon-tasks'/>&nbsp;类别管理",
+        "href": "/sys/sortPage.action"
       },
       {
-        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;幼儿及家长管理",
-        "href": "/sys/roleManger"
-      }
-    ]
-  },
-  {
-    "text": "<span class='glyphicon glyphicon-info-sign'/>&nbsp;资讯管理",
-    "state": {
-      "expanded":false
-    },
-    "backColor": "#428BCA",
-    "color": "#FFF",
-    "selectable": false,
-    "nodes": [
-      {
-        "text": "<span class='glyphicon glyphicon-book'/>&nbsp;校园活动资讯管理",
-        "href": "/sys/roleManger"
+        "text": "<span class='glyphicon glyphicon-envelope'/>&nbsp;新闻管理",
+        "href": "/sys/newsPage.action"
       },
       {
-        "text": "<span class='glyphicon glyphicon-user'/>&nbsp;学生风采资讯管理",
-        "href": "/sys/roleManger"
-      },
-      {
-        "text": "<span class='glyphicon glyphicon-zoom-in'/>&nbsp;食谱管理",
-        "href": "/sys/roleManger"
+        "text": "<span class='glyphicon glyphicon-edit'/>&nbsp;评论管理",
+        "href": "/sys/commentPage.action"
       }
     ]
   }

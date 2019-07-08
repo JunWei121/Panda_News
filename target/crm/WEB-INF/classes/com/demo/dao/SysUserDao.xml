@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.dao.SysUserDao">
+
+    <!--    基于Mapper代理开发（(扫描包)  命名空间和id 类型 要对应-->
+    <select id="selectSysUserList" parameterType="sysUser" resultType="sysUser">
+        SELECT s.* , r.rname FROM sys_user s LEFT JOIN role r ON s.rid = r.RId
+        <where>
+            <if test="sname !=null and sname != ''">
+                sname like concat ('%',#{sname},'%')
+            </if>
+            <if test="rid !=null and rid != ''">
+                and s.rid = #{rid}
+            </if>
+            <if test="sid !=null and sid != ''">
+                and s.sid = #{sid}
+            </if>
+            <if test="state !=null">
+                and state = #{state}
+            </if>
+        </where>
+
+        ORDER BY s.sid asc
+        <if test="pageNumber != null and pageNumber !='' and pageSize !=null and pageSize != ''">
+            limit #{pageIndex} , #{pageSize}
+        </if>
+    </select>
+</mapper>

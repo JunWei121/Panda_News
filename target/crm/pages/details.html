@@ -1,0 +1,1213 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>新闻内容页</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-icons.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootbox.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+<!-- Preloader -->
+<div class="loader-mask">
+    <div class="loader">
+        <div></div>
+    </div>
+</div>
+
+<!-- Bg Overlay -->
+<div class="content-overlay"></div>
+
+<!-- Sidenav -->
+<header class="sidenav" id="sidenav">
+
+    <!-- close -->
+    <div class="sidenav__close">
+        <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
+            <i class="ui-close sidenav__close-icon"></i>
+        </button>
+    </div>
+
+    <!-- Nav -->
+    <nav class="sidenav__menu-container">
+        <ul class="sidenav__menu" role="menubar">
+            <!-- Categories -->
+
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">热点新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">实时新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">国际新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">体育新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">娱乐新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">游戏新闻</a>
+            </li>
+            <li>
+                <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">科技新闻</a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+</header>
+<!-- end sidenav -->
+<!------侧栏导航------------------------------------------------------------------------------------------------------------->
+
+<!------头部导航栏------------------------------------------------------------------------------------------------------------->
+<main class="main oh" id="main">
+
+    <!-- Navigation -->
+    <header class="nav">
+
+        <div class="nav__holder nav--sticky">
+            <div class="container relative">
+                <div class="flex-parent">
+
+                    <!-- Side Menu Button -->
+                    <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
+              <span class="nav-icon-toggle__box">
+                <span class="nav-icon-toggle__inner"></span>
+              </span>
+                    </button>
+                    <!-- end Side menu button -->
+
+                    <!-- Mobile logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="images/熊猫头.gif" style="height: 30px; display: inline;">
+                    </a>
+
+                    <!-- Nav-wrap -->
+                    <nav class="flex-child nav__wrap d-none d-lg-block">
+                        <ul class="nav__menu">
+
+                            <li>
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="#rd">热点新闻</a>
+                            </li>
+                            <li>
+                                <a href="#ss">实时新闻</a>
+                            </li>
+                            <li>
+                                <a href="#ty">体育新闻</a>
+                            </li>
+                            <li>
+                                <a href="#gj">国际新闻</a>
+                            </li>
+                            <li>
+                                <a href="#kj">科技新闻</a>
+                            </li>
+                            <li>
+                                <a href="#yl">娱乐新闻</a>
+                            </li>
+                            <li>
+                                <a href="#yx">游戏新闻</a>
+                            </li>
+
+
+                        </ul>
+                        <!-- end menu -->
+                    </nav>
+                    <!-- end nav-wrap -->
+
+                    <!-- Nav Right -->
+                    <div class="nav__right nav--align-right d-lg-flex">
+
+                        <div class="nav__right-item socials nav__socials d-none d-lg-flex">
+                            <div id="isLogin"></div> &emsp; &emsp;
+
+
+                            <!--<a href="moban947/user-Center.html" class="text-muted">个人中心</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                            <a href="release.html" class="text-muted">上传新闻</a>
+                        </div>
+
+                        <!-- Search -->
+                        <!--搜索条-->
+                        <div class="nav__right-item nav__search">
+                            <a href="#" class="nav__search-trigger" id="nav__search-trigger">
+                                <i class="ui-search nav__search-trigger-icon"></i>
+                            </a>
+                            <div class="nav__search-box" id="nav__search-box">
+                                <!--	搜索条调用数据库-->
+                                <form class="nav__search-form">
+                                    <input type="text" placeholder="搜索关键词" class="nav__search-input">
+                                    <button type="submit" class="search-button btn btn-lg btn-color btn-button">
+                                        <i class="ui-search nav__search-icon">
+
+                                        </i>
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- end nav right -->
+
+                </div>
+                <!-- end flex-parent -->
+            </div>
+            <!-- end container -->
+
+        </div>
+    </header>
+    <!-- end navigation -->
+
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="flex-parent align-items-center">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img alt="Brand" src="images/熊猫头.gif" style="height: 130px; display: inline;">
+                </a>
+
+                <!-- Ad Banner 728 -->
+                <div class="text-center">
+                    <a href="index.html">
+                        <img src="img/blog/timg_1.jpg">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <div class="main-container container" id="main-container">
+
+        <!-- Content -->
+        <div class="row">
+
+            <!-- post content -->
+            <div class="col-lg-8 blog__content mb-30">
+
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__url"><i class="ui-home"></i></a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__url">新闻</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current" id="type">
+                    </li>
+                </ul>
+
+                <!-- standard post -->
+                <article class="entry">
+
+                    <div class="single-post__entry-header entry__header">
+                        <a href="#" class="entry__meta-category" id="type1"></a>
+                        <h1 class="single-post__entry-title" id="title">
+                        </h1>
+
+                        <ul class="entry__meta">
+                            <li class="entry__meta-author">
+                                <i class="ui-author"></i>
+                                <a href="#" id="author">The One</a>
+                            </li>
+                            <li class="entry__meta-date">
+                                <i class="ui-date"></i>
+                                <a id="date"></a>
+                            </li>
+                            <li class="entry__meta-comments">
+                                <i class="ui-comments"></i>
+                                <a id="sort">2333</a>
+                            </li>
+                            <li class="entry__meta-comments">
+                                <i class="ui-heart"></i>
+                                <a id="clicks">2333</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="entry__img-holder">
+                        <img alt="" class="entry__img" id="newsImg">
+                    </div>
+
+
+                    <div class="entry_article" id="details">
+                        <!--TODO POST-->
+
+
+                    </div>
+                    <!-- end entry article -->
+
+                    <!-- Newsletter -->
+                    <div class="widget widget_mc4wp_form_widget">
+                        <h4 class="widget-title">订阅新闻</h4>
+                        <form class="mc4wp-form" method="post">
+                            <div class="mc4wp-form-fields">
+                                <p>
+                                    <input type="email" name="EMAIL" placeholder="你的邮箱" required="">
+                                </p>
+                                <p>
+                                    <input type="submit" class="btn btn-lg btn-color" value="订阅">
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <!-- Comments -->
+                    <div class="entry-comments mt-30">
+                        <div class="title-wrap mt-40">
+                            <h5 class="uppercase">评论区</h5>
+                        </div>
+                        <ul class="comment-list" id="comment_list">
+
+                        </ul>
+                    </div>
+                    <!-- end comments -->
+
+                    <!-- Comment Form -->
+                    <div id="respond" class="comment-respond">
+                        <div class="title-wrap">
+                            <h5 class="comment-respond__title uppercase">发表评论</h5>
+                        </div>
+                        <form id="form_comment" class="comment-form" method="post">
+                            <p class="comment-form-comment">
+                                <input type="hidden" name="newsId" id="nid">
+                                <input type="hidden" name="commentDate" id="cdate">
+                                <!--<input type="hidden" name="username" id="cuser">-->
+                                <textarea id="comment" name="commentContent" rows="5" required="required"
+                                          placeholder="输入你的评论"></textarea>
+                            </p>
+
+                            <p class="comment-form-submit">
+                                <input type="button" class="btn btn-lg btn-color btn-button" value="发表评论"
+                                       id="addComment">
+                            </p>
+
+                        </form>
+                    </div>
+                    <!-- end comment form -->
+
+            </div>
+            <!-- end col -->
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4 sidebar sidebar--right">
+
+                <!-- Widget Social Subscribers -->
+                <div class="widget widget-social-subscribers">
+                    <ul class="widget-social-subscribers__list">
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--facebook">
+                                <i class="ui-facebook widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">粉丝</span>
+                            </a>
+                        </li>
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--twitter">
+                                <i class="ui-twitter widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">关注</span>
+                            </a>
+                        </li>
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--google">
+                                <i class="ui-google widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">关注</span>
+                            </a>
+                        </li>
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--rss">
+                                <i class="ui-rss widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">搜索</span>
+                            </a>
+                        </li>
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--youtube">
+                                <i class="ui-youtube widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">搜索</span>
+                            </a>
+                        </li>
+                        <li class="widget-social-subscribers__item">
+                            <a href="#" class="widget-social-subscribers__url widget-social-subscribers--instagram">
+                                <i class="ui-instagram widget-social-subscribers__icon"></i>
+                                <span class="widget-social-subscribers__number">2333</span>
+                                <span class="widget-social-subscribers__text">关注</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Widget Newsletter -->
+                <div class="widget widget_mc4wp_form_widget">
+                    <h4 class="widget-title">订阅新闻</h4>
+                    <form class="mc4wp-form" method="post">
+                        <div class="mc4wp-form-fields">
+                            <p>
+                                <input type="email" name="EMAIL" placeholder="你的邮箱" required="">
+                            </p>
+                            <p>
+                                <input type="submit" class="btn btn-lg btn-color" value="订阅">
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <!-- end widget newsletter -->
+
+                <!-- Widget Popular/Latest Posts -->
+                <!-- Widget Popular/Latest Posts -->
+                <div class="widget widget-tabpost">
+                    <div class="tabs widget-tabpost__tabs">
+                        <ul class="tabs__list widget-tabpost__tabs-list">
+                            <li class="tabs__item widget-tabpost__tabs-item tabs__item--active">
+                                <a href="#tab-trending" class="tabs__url tabs__trigger widget-tabpost__tabs-url">热点</a>
+                            </li>
+                            <li class="tabs__item widget-tabpost__tabs-item">
+                                <a href="#tab-latest" class="tabs__url tabs__trigger widget-tabpost__tabs-url">最新</a>
+                            </li>
+                            <li class="tabs__item widget-tabpost__tabs-item">
+                                <a href="#tab-comments" class="tabs__url tabs__trigger widget-tabpost__tabs-url">国际</a>
+                            </li>
+                        </ul>
+                        <!-- end tabs -->
+
+                        <!-- tab content -->
+                        <div class="tabs__content tabs__content-trigger widget-tabpost__tabs-content">
+
+                            <div class="tabs__content-pane tabs__content-pane--active" id="tab-trending">
+                                <ul class="post-list-small">
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=hotdate1">
+                                                        <img src="images/k4.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload" id="im1">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="hot1">黄仁勋发布新运算显卡 <br>性能提升不止一个TITAN
+                                                    Xp</h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+
+                                                        <a id="hotdate1"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=hotdate2">
+                                                        <img src="images/hot1.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="hot2">特朗普在例会中竖起拇指表示赞同
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="hotdate2"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=hotdate3">
+                                                        <img src="images/l3.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="hot3">未来汽车究竟能完成什么功能
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="hotdate3"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=hotdate4">
+                                                        <img src="images/r3.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="hot4">真的有外星人存在吗
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="hotdate4"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="tabs__content-pane" id="tab-latest">
+                                <ul class="post-list-small">
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=newdate1">
+                                                        <img src="images/k21.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="new1">雷蛇鼠标真的那么好用吗？
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="newdate1"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=new2">
+                                                        <img src="images/k5.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="new2">暴力破解新型iphone密码的方法
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="newdate2"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=newdate3">
+                                                        <img src="images/k3.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="new3">windows最新漏洞！不看的人都被监视啦
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="newdate3"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=newdate4">
+                                                        <img src="images/l2.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="new4">权志龙当兵照片流出，网友惊呼：“恋爱了”
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="newdate4"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tabs__content-pane" id="tab-comments">
+                                <ul class="post-list-small">
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=gdate1">
+                                                        <img src="images/hot1.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="g1">特朗普在例会中竖起拇指以表赞同
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="gdate1"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=g2">
+                                                        <img src="images/g3.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="g2">希拉里要进行第二次总统竞选了吗？
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="gdate2"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+                                                    <a href="#details.html?nid=gdate3">
+                                                        <img src="images/g4.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="g3">如何打破两国间隔阂
+
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="gdate3"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-75">
+
+                                                    <a href="#details.html?nid=gdate4">
+                                                        <img src="images/g2.jpg" src="img/empty.png" alt=""
+                                                             class=" lazyload">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title" id="g4">某国领导人乘私人飞机访华
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-date">
+                                                        <i class="ui-date"></i>
+                                                        <a id="gdate4"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- end tab content -->
+                    </div>
+                    <!-- end tabs -->
+                </div>
+                <!-- end widget popular/latest posts -->
+
+                <!-- Widget Ad 300 -->
+                <div class="widget widget_media_image">
+                    <a href="#">
+                        <img src="img/blog/x.jpg" alt="">
+                    </a>
+                </div>
+                <!-- end widget ad 300 -->
+
+                <!-- Widget Socials -->
+                <div class="widget widget-socials">
+                    <h4 class="widget-title">关注我们</h4>
+                    <div class="socials">
+                        <a class="social social-facebook social--large" href="#" title="facebook" target="_blank"
+                           aria-label="facebook">
+                            <i class="ui-facebook"></i>
+                        </a>
+                        <!--
+      -->
+                        <a class="social social-twitter social--large" href="#" title="twitter" target="_blank"
+                           aria-label="twitter">
+                            <i class="ui-twitter"></i>
+                        </a>
+                        <!--
+      -->
+                        <a class="social social-google-plus social--large" href="#" title="google" target="_blank"
+                           aria-label="google">
+                            <i class="ui-google"></i>
+                        </a>
+                        <!--
+      -->
+                        <a class="social social-instagram social--large" href="#" title="instagram" target="_blank"
+                           aria-label="instagram">
+                            <i class="ui-instagram"></i>
+                        </a>
+                        <!--
+      -->
+                        <a class="social social-youtube social--large" href="#" title="youtube" target="_blank"
+                           aria-label="youtube">
+                            <i class="ui-youtube"></i>
+                        </a>
+                        <!--
+      -->
+                        <a class="social social-rss social--large" href="#" title="rss" target="_blank"
+                           aria-label="rss">
+                            <i class="ui-rss"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- end widget socials -->
+
+                <!-- Widget Ad 125 -->
+                <div class="widget widget-gallery-sm">
+                    <ul class="widget-gallery-sm__list">
+                        <li class="widget-gallery-sm__item">
+                            <a href="#"><img src="images/熊猫头.gif" alt="" style="height: 190px;"></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- end widget ad 300 -->
+
+                <!-- Widget Carousel -->
+                <div class="widget">
+                    <h4 class="widget-title">精选文章</h4>
+                    <div id="owl-single" class="owl-carousel owl-theme">
+
+                        <article class="entry">
+                            <div class="entry__img-holder mb-0">
+                                <a href="details.html">
+                                    <div class="thumb-bg-holder">
+                                        <img data-src="img/blog/y3plus.jpg" src="img/blog/y3plus.jpg"
+                                             class="entry__img owl-lazy" alt="">
+                                        <div class="bottom-gradient"></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="thumb-text-holder">
+                                <h2 class="thumb-entry-title thumb-entry-title--sm">
+                                    <a href="details.html">发售仅一周底特律变人成开发商最成功游戏！</a>
+                                </h2>
+                            </div>
+                        </article>
+
+                        <article class="entry">
+                            <div class="entry__img-holder mb-0">
+                                <a href="details.html">
+                                    <div class="thumb-bg-holder">
+                                        <img data-src="img/blog/t1plus.jpg" src="img/blog/t1plus.jpg"
+                                             class="entry__img owl-lazy" alt="">
+                                        <div class="bottom-gradient"></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="thumb-text-holder">
+                                <h2 class="thumb-entry-title thumb-entry-title--sm">
+                                    <a href="details.html">前线观察|VAR之殇:功利的中国足球VS纯粹的世界杯</a>
+                                </h2>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Latest Reviews -->
+                <div class="widget widget-reviews">
+                    <h4 class="widget-title">最新评论</h4>
+                    <ul class="post-list-small">
+                        <li class="post-list-small__item">
+                            <article class="post-list-small__entry clearfix">
+                                <div class="post-list-small__img-holder">
+                                    <div class="thumb-container thumb-75">
+                                        <a href="details.html">
+                                            <img data-src="img/blog/review_post_1.jpg" src="img/blog/review_post_1.jpg"
+                                                 alt="" class=" lazyload">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="post-list-small__body">
+                                    <h3 class="post-list-small__entry-title">
+                                        <a href="details.html">我对iPhone X的第一印象</a>
+                                    </h3>
+                                    <ul class="entry__meta">
+                                        <li class="entry__meta-rating">
+                                            <i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star-outline"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="post-list-small__item">
+                            <article class="post-list-small__entry clearfix">
+                                <div class="post-list-small__img-holder">
+                                    <div class="thumb-container thumb-75">
+                                        <a href="details.html">
+                                            <img data-src="img/blog/review_post_2.jpg" src="img/empty.png" alt=""
+                                                 class=" lazyload">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="post-list-small__body">
+                                    <h3 class="post-list-small__entry-title">
+                                        <a href="details.html">最好的儿童用笔记本电脑</a>
+                                    </h3>
+                                    <ul class="entry__meta">
+                                        <li class="entry__meta-rating">
+                                            <i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star-outline"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="post-list-small__item">
+                            <article class="post-list-small__entry clearfix">
+                                <div class="post-list-small__img-holder">
+                                    <div class="thumb-container thumb-75">
+                                        <a href="details.html">
+                                            <img data-src="img/blog/review_post_3.jpg" src="img/empty.png" alt=""
+                                                 class=" lazyload">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="post-list-small__body">
+                                    <h3 class="post-list-small__entry-title">
+                                        <a href="details.html">PS4 Joypads预购周五在纽约开始</a>
+                                    </h3>
+                                    <ul class="entry__meta">
+                                        <li class="entry__meta-rating">
+                                            <i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star-outline"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="post-list-small__item">
+                            <article class="post-list-small__entry clearfix">
+                                <div class="post-list-small__img-holder">
+                                    <div class="thumb-container thumb-75">
+                                        <a href="details.html">
+                                            <img data-src="img/blog/review_post_4.jpg" src="img/empty.png" alt=""
+                                                 class=" lazyload">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="post-list-small__body">
+                                    <h3 class="post-list-small__entry-title">
+                                        <a href="details.html">动手：鹦鹉AR无人机2.0审查</a>
+                                    </h3>
+                                    <ul class="entry__meta">
+                                        <li class="entry__meta-rating">
+                                            <i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star"></i>
+                                            <!--
+                --><i class="ui-star-outline"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Widget Tags -->
+                <div class="widget widget_tag_cloud">
+                    <h4 class="widget-title">标签</h4>
+                    <div class="tagcloud">
+                        <a href="#">杂志</a>
+                        <a href="#">创意</a>
+                        <a href="#">反应</a>
+                        <a href="#">现代</a>
+                        <a href="#">技术</a>
+                        <a href="#">博客</a>
+                        <a href="#">网站</a>
+                        <a href="#">消息</a>
+                    </div>
+                </div>
+
+            </aside>
+            <!-- end sidebar -->
+
+        </div>
+        <!-- end content -->
+    </div>
+    <!-- end main container -->
+
+    <!-- Footer -->
+    <footer class="footer footer--dark">
+        <div class="container">
+            <div class="footer__widgets">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="widget-title">其他新闻类型</h4>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;国际</a>
+                            </li>
+                            <li>
+                                <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;社会</a>
+                            </li>
+                            <li>
+                                <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;航空</a>
+                            </li>
+                            <li>
+                                <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;军事</a>
+                            </li>
+                            <li>
+                                <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;评论</a>
+                            </li>
+                        </ul>
+                        <p>
+                            <a href="details.html">&nbsp;&nbsp;&nbsp;&nbsp;新闻地图&gt;&gt;</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <ul class="post-list-small">
+                            <li class="post-list-small__item">
+                                <article class="post-list-small__entry clearfix">
+                                    <div class="post-list-small__img-holder">
+                                        <div class="thumb-container thumb-75">
+                                            <a href="details.html">
+                                                <img src="img/blog/maci.jpg" width="80px" height="60px"
+                                                     src="img/empty.png" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-list-small__body">
+                                        <h3 class="post-list-small__entry-title">
+                                            <a href="https://china.nba.com/">NBA往届总决赛回顾</a>
+                                        </h3>
+                                        <ul class="entry__meta">
+                                            <li class="entry__meta-date">
+                                                <i class="ui-date"></i> 2018/6/25
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="post-list-small__item">
+                                <article class="post-list-small__entry clearfix">
+                                    <div class="post-list-small__img-holder">
+                                        <div class="thumb-container thumb-75">
+                                            <a href="details.html">
+                                                <img src="img/blog/shijibei.jpg" width="80px" height="60px"
+                                                     src="img/empty.png" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="post-list-small__body">
+                                        <h3 class="post-list-small__entry-title">
+                                            <a href="https://sports.qq.com/csocce/newgz/2019yzb.htm">男足亚洲杯精彩集锦</a>
+                                        </h3>
+                                        <ul class="entry__meta">
+                                            <li class="entry__meta-date">
+                                                <i class="ui-date"></i> 2018/6/25
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget widget__newsletter">
+
+                            <div class="socials mb-20">
+                                <a href="#"> <img src="img/blog/6070397_20151116164525.png" width="35px" height="35px"></a>&nbsp;&nbsp;
+                                <a href="#"> <img src="img/blog/54fbbe53a227a84d1360e328941e60df.jpg" width="30px"
+                                                  height="30px"></a>&nbsp;&nbsp;
+                                <a href="#"> <img src="img/blog/u=1970086360,1836715149&fm=214&gp=0.png" width="35px"
+                                                  height="35px"></a>&nbsp;&nbsp;
+                                <a href="#"> <img src="img/blog/ti.jpg" width="35px" height="40px"></a>
+                            </div>
+
+                            <form class="mc4wp-form" method="post">
+                                <div class="mc4wp-form-fields">
+                                    <p>
+                                        <input type="email" name="EMAIL" placeholder="邮箱地址" required="">
+                                    </p>
+                                    <p>
+                                        <input type="submit" class="btn btn-lg btn-color" value="点我订阅！">
+                                    </p>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">有效链接</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">关于</a>
+                                </li>
+                                <li>
+                                    <a href="#">服务协议</a>
+                                </li>
+                                <li>
+                                    <a href="#">隐私政策</a>
+                                </li>
+                                <li>
+                                    <a href="#">客服中心</a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8080/crm_war_exploded/sys/admin.action">后台登入</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 order-lg-2 text-right text-md-center">
+                        <div class="widget widget_nav_menu">
+                            <ul>
+                                <li>
+                                    <a href="#">团队</a>
+                                </li>
+                                <li>
+                                    <a href="#">隐私</a>
+                                </li>
+                                <li>
+                                    <a href="#">广告</a>
+                                </li>
+                                <li>
+                                    <a href="#">企业</a>
+                                </li>
+                                <li>
+                                    <a href="#">时事通讯</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-lg-1 text-md-center">
+								<span class="copyright">
+                Copyright &copy; 2018.Panda News All rights reserved
+              </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end bottom footer -->
+    </footer>
+    <!-- end footer -->
+
+    <div id="back-to-top">
+        <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
+    </div>
+
+</main>
+<!-- end main-wrapper -->
+
+<!-- jQuery Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/easing.min.js"></script>
+<script src="js/owl-carousel.min.js"></script>
+<script src="js/twitterFetcher_min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.appear.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/isLogin.js"></script>
+<script>
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
+
+    //请求后台传回新闻   /news/comments.action
+    var app = {
+        init: function () {
+            $.get(getRootPath() + "/news/details.action?nid=" + getQueryVariable("nid"), function (data) {
+                $("#author").html(data.uname);
+                $("#date").html(data.releaseTime);
+                $("#sort").html(data.sortName);
+                $("#clicks").html(data.clicks);
+                $("#details").html(data.nContent);
+
+                if (data == null || data == "") {
+                    bootbox.alert("抱歉你查看的新闻不存在！");
+                }
+
+            });
+
+
+            $.get(getRootPath() + "/news/comments.action?nid=" + getQueryVariable("nid"), function (data) {
+                $.each(data, function (index, item) {
+                    $("#comment_list").append("<li><label>" + item.uname + "</label>\n" +
+                        "<p><b>" + item.cContent + "</b></p><i class=\"ui-date\"><a>" + item.creleaseTime + "</a></i>\n" +
+                        "<hr/>\n" +
+                        "</li>")
+                })
+            });
+        }
+    };
+
+    app.init();
+
+    $("#addComment").click(function () {
+        $.get(getRootPath() + "/news/addComment.action?nid=" + getQueryVariable("nid") + "&cContent=" +
+            $("#comment").val(), function (data) {
+            if (data == "OK") {
+                bootbox.alert("发表成功", function () {
+                    window.location.reload();
+                });
+            } else if (data == "FAIl") {
+                bootbox.alert("发表失败，请重试!")
+            } else {
+                bootbox.alert("抱歉,您还未登录!")
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

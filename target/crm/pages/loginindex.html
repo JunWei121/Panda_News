@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <title>熊猫新闻网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!--<meta name="keywords" content="Eminent Login Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />-->
+
+    <!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>-->
+    <link href="css/loginstyle.css" rel='stylesheet' type='text/css' media="all"/>
+    <script src='js/loginjquery.min.js'></script>
+    <script src="js/loginindex.js"></script>
+    <script src="js/bootbox.all.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+
+
+<body>
+
+<h1>PAN DA 新 闻 网</h1>
+
+<div class="form-w3ls">
+    <ul class="tab-group cl-effect-4">
+        <li class="tab active"><a href="#signin-agile">登 录</a></li>
+        <li class="tab"><a href="#signup-agile">注 册</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="signin-agile">
+            <form id="loginForm">  <!--method=post没加-->
+
+                <p class="header">用户名</p>
+                <input type="text" name="uname" id="username" value="username" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'username';}">
+
+                <p class="header">密码</p>
+                <input type="password" name="upwd" id="password" value="password" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'password';}">
+
+                <input type="checkbox" id="check" name="check" value="1">
+                <label for="check"><span></span> 记住密码</label>
+
+                <input type="button" class="sign-in" onclick="return check_r()" value="登录">
+
+
+            </form>
+        </div>
+        <div id="signup-agile">
+            <form id="registerForm">
+
+                <p class="header">用户名</p>
+                <input type="text" name="uname" value="username" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Username';}">
+
+                <p class="header">密码</p>
+                <input type="password" name="upwd" value="password" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Password';}">
+
+                <p class="header">重复密码</p>
+                <input type="password" value="password" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Password';}">
+
+                <input type="button" class="register" value="注册" id="register">
+            </form>
+        </div>
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<!--验证不为空-->
+<script>
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+    function check_r() {
+        var name = $("#username").val();
+        var pass = $("#password").val();
+        if (name == "username" || pass == "password" || name == "" || pass == "") {
+            alert("提示！用户名密码不能为空！");
+            $("#username").val("");
+            $("#password").val("");
+            return false;
+        } else {
+            $.post(getRootPath() + "/user/loginin.action",
+                $("#loginForm").serialize(), function (data) {
+                    if (data == "OK") {
+                        alert("登录成功！即将返回上一页！");
+                        func();
+
+                        function func() {
+                            window.history.back();
+                            location.reload();
+                        }
+                    } else if (data == "FAIL") {
+                        alert("账号或者密码错误！请重试！");
+                    } else {
+                        alert("未知错误！");
+                        window.location.reload();
+                    }
+                });
+            return true;
+        }
+    }
+
+
+    $("#register").click(function () {
+        $.post(getRootPath() + "/user/register.action",
+            $("#registerForm").serialize(), function (data) {
+                if (data == "OK") {
+                    alert("注册成功！快去登录试试吧！");
+                    func();
+
+                    function func() {
+                        window.location.reload();
+                    }
+                } else if (data == "FAIL") {
+                    alert("注册失败！请重试！");
+                } else {
+                    alert("未知错误！");
+                    window.location.reload();
+                }
+            });
+    });
+
+    // 	编写函数,在按键升起时触发,监测cookie中是否存在该用户名的key,如果有,则把value赋值给密码框
+    $("#username").keyup(function () {
+        var username = $("#username").val();
+        if (username != "") {
+            var password = $.cookie(username);
+            if (password != null) {
+                $("#password").val(password);
+                $("#check").attr("checked", true);
+            }
+        }
+
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="stylesheet" href="../css/bootstrap.dark.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- 先引入jQuery的js文件，再引入bootstrap的js文件 -->
+    <script src="../js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap-table.css">
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script>
+        $(function () {
+            $("#sysTable").bootstrapTable('destroy');//在初始化table之前，要将table销毁，否则会保留上次加载的内容
+            $("#sysTable").bootstrapTable({
+                url: getRootPath() + '/sys/listByPage.action', //必有属性
+                method: 'get',
+                // search: true,//是否启用搜索框 （你有兴趣自己可以试试）
+                toolbar: '#toolbar',
+                showRefresh: "true",  //显示舒心刷新按钮
+                showToggle: "true", //显示格式切换按钮
+                showColumns: "true", //显示过滤按钮
+                // 分页相关 ，如果分页，服務器端返回的数据需要包含有total属性和rows属性
+                pagination: true,		// 显示分页
+                pageNumber: 1,			// 初始化加载第一页
+                pageSize: 4,			// 每页4条数据
+                pageList: [4, 6, 9],	// 可以选择的每页数量
+                sidePagination: "server", //表示服务端请求分页数据
+
+                // 提交到Server的参数列表 ，
+                // 参数设定相关
+                queryParamsType: "undefined",  // undefined：提交到服务器端的参数自定义
+                queryParams: function (params) {
+                    // 参数params中自带 pageSize , pageNumber , sortName , sortOrder
+
+                    // 为params对象增加额外三个属性
+                    params.sname = $.trim($("#sname").val());
+                    params.rid = $("#rid").val();
+                    params.state = $('#state option:selected').val();
+                    // console.log(params);
+                    return params;
+                },
+                //分页结束
+                columns: [   //必有属性
+                    {
+                        field: 'sid',
+                        title: 'ID'
+                        // checkbox: true
+                    },
+                    {
+                        field: 'sname',
+                        title: '账号'
+                    },
+                    {
+                        field: 'rname',
+                        title: '角色',
+                    }, {
+                        field: 'createtime',
+                        title: '创建日期时间'
+                    }, {
+                        field: 'state',
+                        title: '状态',
+                        formatter: function (value, row, index) {
+                            return value == 1 ? "<b style='color: limegreen'>可用</b>" : "<b style='color: orangered'>禁用</b>";
+                        }
+                    },
+                    {
+                        field: 'state',
+                        title: '操作',
+                        formatter: operateFormatter
+                    }
+                ]
+            });
+
+
+            function operateFormatter(value, row, index) {
+                /*修改按钮*/
+                var enable = '<button id="btnEnble" type="button" class="edit btn btn-xs btn-info" onclick="toEnble(' + row.sid + ');">' +
+                    ' <span aria-hidden="true"/>启用' + '</button>';
+                // /*删除按钮*/
+                // var del = '<button id="btnDel" type="button" class="edit btn btn-xs btn-danger">' +
+                //     ' <span class="glyphicon glyphicon-remove" aria-hidden="true"/>删除' + '</button>';
+                var disable = '<button id="btnDisable" type="button" class="edit btn btn-xs btn-danger" onclick="toDisable(' + row.sid + ');">' +
+                    ' <span aria-hidden="true"/>禁用' + '</button>';
+                return value == 1 ? disable : enable;
+            }
+
+            //启用管理员
+            toEnble = function (sid) {
+                $.get(getRootPath() + "/sys/admin/enable.action?sid=" + sid, function (data) {
+                    if (data == "OK") {
+                        bootbox.alert("启用成功！")
+                    } else if (data == "FAIL") {
+                        bootbox.alert("操作失败！")
+                    } else {
+                        bootbox.alert("您没有此权限！")
+                    }
+                    $("#sysTable").bootstrapTable('refresh');
+                })
+            };
+
+            //禁用管理员
+            toDisable = function (sid) {
+                $.get(getRootPath() + "/sys/admin/disable.action?sid=" + sid, function (data) {
+                    if (data == "OK") {
+                        bootbox.alert("禁用成功！")
+                    } else if (data == "FAIL") {
+                        bootbox.alert("操作失败！")
+                    } else {
+                        bootbox.alert("您没有此权限！")
+                    }
+                    $("#sysTable").bootstrapTable('refresh');
+                })
+            };
+
+
+            /*模态框关闭方法*/
+            $("#modalBtnCancel").click(function () {
+                $("#addForm")[0].reset();
+                $("#addUser").modal("hide");
+            });
+
+
+            /*模态框动态加载下拉框*/
+            //查询 角色下拉框加载数据
+            $.getJSON(getRootPath() + '/sys/role/loadRole.action', function (jsonData) {
+                // console.log(jsonData);
+                //           <option value="">--请选择--</option>
+                var options = '<option value="">' + '--请选择--' + '</option>';
+                $.each(jsonData, function (index, role) {
+                    options += '<option value="' + role.rid + '">' + role.rname + '</option>';
+                });
+                /*填充到下拉框*/
+                $("#rid").html(options);
+                $("#selectRole").html(options);
+            });
+
+
+            $("#toSearch").click(function () {
+                //搜索刷新数据表格
+                $("#sysTable").bootstrapTable('refresh');
+
+            });
+
+            //获取项目url路径
+            function getRootPath() {
+                // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+                var curWwwPath = window.location.href;
+                // 获取当前相对路径： /springmvc/page/frame/test.html
+                var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+                var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+                // 获取带"/"的项目名，如：/springmvc
+                var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+                var rootPath = local + projectName;
+                return rootPath;
+            }
+
+            //添加管理员事件
+            $("#modalBtnAdd").click(function () {
+                var finish = true;
+                //p判断是否填写完整
+                $("#addSName,#addSpwd,#addSpwd2,#selectRole").each(function () {
+                    var value = $(this).val();
+                    if (value == null || value == "") {
+                        $(this).focus();
+                        finish = false;
+                    }
+                });
+
+                var same = true;
+
+                //判断密码一致性
+                if ($("#addSpwd").val() != $("#addSpwd2").val()) {
+                    same = false;
+                }
+
+                if (finish && same) {
+                    toAdd();
+                } else if (!finish) {
+                    bootbox.alert("请将表单填写完整!");
+                } else {
+                    bootbox.alert("确认密码和密码不一致!");
+                }
+            });
+
+            //添加方法请求
+            function toAdd() {
+                $.post(getRootPath() + "/sys/admin/create.action",
+                    $("#addForm").serialize(), function (data) {
+                        if (data == "OK") {
+                            $("#addUser").modal("hide");
+                            $("#addForm")[0].reset();
+                            bootbox.alert("添加成功");
+                            $("#sysTable").bootstrapTable('refresh');
+                        } else if (data == "FAIL") {
+                            bootbox.alert("添加失败！");
+                        } else {
+                            bootbox.alert("您没有此权限！");
+                        }
+                    });
+            }
+
+            //下载为表单
+            $("#download").click(function () {
+                window.location.href = getRootPath() + "/sys/admin/download.action?sname=" + $("#sname").val() + "&rid="
+                    + $("#rid").val() + "&state=" + $('#state option:selected').val()
+            })
+
+
+        })
+    </script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>系统用户管理</h3>
+        </div>
+
+
+        <!-- 客户列表查询部分  start-->
+        <div id="page-wrapper">
+            <!-- /.row -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="sname">管理员名</label>
+                            <input type="text" class="form-control" id="sname"
+                                   placeholder="支持模糊搜索" value="" name="sname"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="rid">角色</label>
+                            <select class="form-control" id="rid" name="rid">
+                                <option value="">--请选择--</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">状态</label>
+                            <select class="form-control" id="state">
+                                <option value="">--请选择--</option>
+                                <option value="1" name="state">&emsp;可用</option>
+                                <option value="0" name="state">&emsp;禁用</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="toSearch">搜索</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <!--toolbar-->
+                <div id="toolbar">
+                    <!--新增按钮-->
+                    <button id="btnAdd" type="button" class="btn btn-default" data-toggle="modal"
+                            data-target="#addUser">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"/>新增
+                    </button>
+                    <!--下载按钮-->
+                    <button id="download" type="button" class="btn btn-default" data-toggle="modal"
+                            data-target="#downloadTable">
+                        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"/>下载
+                    </button>
+                </div>
+
+
+                <!--RoleTable-->
+                <table id="sysTable" style="table-layout: fixed;"></table>
+            </div>
+        </div>
+
+        <!-- 添加-模态框 -->
+        <div class="modal fade" id="addUser" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">&times;
+                        </button>
+                        <h4 class="modal-title">添加新管理用户</h4>
+                    </div>
+                    <form class="form-horizontal" id="addForm" style="margin: 30px;">
+                        <div class="form-group">
+                            <label for="addSName" class="col-md-offset-2 col-md-2 control-label">用户名</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="sname" id="addSName"
+                                       placeholder="用户名">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addSpwd" class="col-md-offset-2 col-md-2 control-label">密码</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="spwd"
+                                       id="addSpwd" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="addSpwd2" class="col-md-offset-2 col-md-2 control-label">确认密码</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="spwd2"
+                                       id="addSpwd2" placeholder="确认密码">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="selectRole" class="col-md-offset-2 col-md-2 control-label">角色</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="selectRole" name="rid"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group modal-footer">
+                            <div class="col-md-offset-4 col-md-6">
+                                <span id="returnMessage" class="glyphicon"></span>
+                                <button type="button" id="modalBtnAdd" class="btn btn-info">添加</button>
+                                <button id="modalBtnCancel" class="btn btn-default">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

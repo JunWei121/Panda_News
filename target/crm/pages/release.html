@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description">
+    <meta name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>发布新闻</title>
+    <link rel="stylesheet" href="css/font-awesome.4.6.0.css">
+    <link href="fulleditorPlugin/css/froala_editor.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="endjs/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootbox.min.js"></script>
+    <script src="js/isLogin.js"></script>
+    <script>
+        $(function () {
+            $(".meun-item").click(function () {
+                $(".meun-item").removeClass("meun-item-active");
+                $(this).addClass("meun-item-active");
+                var itmeObj = $(".meun-item").find("img");
+                itmeObj.each(function () {
+                    var items = $(this).attr("src");
+                    items = items.replace("_grey.png", ".png");
+                    items = items.replace(".png", "_grey.png")
+                    $(this).attr("src", items);
+                });
+                var attrObj = $(this).find("img").attr("src");
+                ;
+                attrObj = attrObj.replace("_grey.png", ".png");
+                $(this).find("img").attr("src", attrObj);
+            });
+            $("#topAD").click(function () {
+                $("#topA").toggleClass(" glyphicon-triangle-right");
+                $("#topA").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $("#topBD").click(function () {
+                $("#topB").toggleClass(" glyphicon-triangle-right");
+                $("#topB").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $("#topCD").click(function () {
+                $("#topC").toggleClass(" glyphicon-triangle-right");
+                $("#topC").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $(".toggle-btn").click(function () {
+                $("#leftMeun").toggleClass("show");
+                $("#rightContent").toggleClass("pd0px");
+            })
+        })
+    </script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="endcss/common.css"/>
+    <link rel="stylesheet" type="text/css" href="endcss/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="endcss/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="endcss/flat-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="endcss/jquery.nouislider.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar navbar-inverse">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="images/熊猫头.gif" style="height: 39px; display: inline;">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">主页</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">新闻类型<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">时事新闻</a></li>
+                        <li><a href="#">政治新闻</a></li>
+                        <li><a href="#">体育新闻</a></li>
+                        <li><a href="#">娱乐新闻</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">更多新闻</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入...">
+                </div>
+                <button type="submit" class="btn btn-default">提交</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-- 点击进入个人中心-->
+                <li>
+                    <div style="padding-top: 12px" id="isLogin"></div>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">动态<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="userCenter/user-Center.html">个人中心</a></li>
+                        <li><a href="User-Center_comment.html">发过的评论</a></li>
+                        <li><a href="User-Center_news.html">发过的新闻</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br/><br/><br/><br/><br/><br/>
+
+<div role="tabpane2" class="tab-pane" id="lmjeditnewscontent" style="padding-top: 0px; ">
+    <form id="releaseFrom">
+        <div class="container">
+            <div class="row">
+                <input placeholder="输入文章标题" style="width: 844px;margin-top: 25px;background-color: #CCCCCC"
+                       name="title">
+                <!--                隐藏框 存封面-->
+                <input id="cover" name="cover" style="display:none" type="text">
+            </div>
+            <div class="row">
+                <section id="editor">
+                    <textarea id='edit' style="margin-top: 25px;" name="nContent">
+                                        
+                                                                                <h1>新闻标题</h1>
+                                    <p><span style="font-size: 20px;">在这里输入新闻内容..在这里输入新闻内容..在这里输入新闻内容..</span></p>
+
+                                    <p align="center"><img src="fulleditorPlugin/img/old_clock.jpg" width="704"
+                                                           class="wp-image-3132106 size-full fr-fin"
+                                                           height="467"></p>
+
+                                    <p align="center">在这里输入图片描述..</p>
+
+                                    <p><span style="font-size: 20px;">示例:警方在天津工业大学街及窩打老道，拘捕2名大学男子，涉嫌與上星期Panda News非法上线案件。</span></p>
+
+                                    <p align="center"><img data-pagespeed-url-hash="2997403130"
+                                                           src="fulleditorPlugin/img/old_clock.jpg" alt="" width="704"
+                                                           class="wp-image-3132105 size-full fr-fin" height="467"></p>
+
+                                    <p align="center">警方押送其中1名嫌疑人重組案情。</p>
+                                        
+                    </textarea>
+                </section>
+            </div>
+            <div class="row">
+
+                新闻类别：
+                <select name="sortId" id="sortSelect">
+                    <option>热点</option>
+                </select>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn-default text-muted" id="release" type="button">点击发布</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="endjs/jquery-1.10.2.js"></script>
+<script src="fulleditorPlugin/js/froala_editor.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/tables.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/lists.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/colors.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/media_manager.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/font_family.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/font_size.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/block_styles.min.js"></script>
+<script src="fulleditorPlugin/js/plugins/video.min.js"></script>
+
+<script>
+    $(function () {
+        $('#edit').editable({inlineMode: false, alwaysBlank: true})
+    });
+
+    var app = {
+        init: function () {
+            //查询 角色下拉框加载数据
+            $.getJSON(getRootPath() + '/loadSort.action', function (jsonData) {
+                // console.log(jsonData);
+                //           <option value="">--请选择--</option>
+                var options = '<option value="">' + '--请选择--' + '</option>';
+                $.each(jsonData, function (index, sort) {
+                    options += '<option value="' + sort.sortId + '">' + sort.sortName + '</option>';
+                });
+                /*填充到下拉框*/
+                $("#sortSelect").html(options);
+            });
+        }
+    };
+
+    app.init();
+
+
+    // $("#release").click(function () {
+    //     $.post(getRootPath() + "/news/releaseNews.action", $("#releaseFrom").serialize(), function (data) {
+    //         if (data == "OK"){
+    //             bootbox.alert("发布成功！");
+    //         }
+    //     })
+    // });
+
+    $("#release").click(function () {
+        //从字符串中匹配出所有的img标签
+        var imgReg = /<img.*?(?:>|\/>)/gi;
+        var srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
+        var arr = $('#edit').val().match(imgReg);  // arr 为包含所有img标签的数组
+        //从数组中获取到第一个的src地址  输出格式为
+        if (arr != null) {
+            var src = arr[0].match(srcReg);
+            //获取图片地址
+        }
+
+        if (src != null) {
+            $("#cover").val(src[1]);
+        }
+
+        var formParam = $("#releaseFrom").serialize();//序列化表格内容为字符串
+        console.log(formParam);
+        $.ajax({
+            type: 'post',
+            url: getRootPath() + "/news/releaseNews.action",
+            data: formParam,
+            cache: false,
+            success: function (data) {
+                if (data == "OK") {
+                    bootbox.alert("发布成功！点击到主页查看吧！", function () {
+                        window.location.href = getRootPath() + "/pages/index.html";
+                    });
+                } else if (data == "FAIL") {
+                    bootbox.alert("抱歉，您还没有完成认证，请先去认证吧。")
+                } else {
+                    bootbox.alert("请先登录！")
+                }
+            }
+        });
+    });
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+</script>
+</body>
+</html>

@@ -14,18 +14,18 @@
     </listener>
 
     <!-- 放行.html文件 -->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>default</servlet-name>-->
-<!--        <url-pattern>*.html</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>default</servlet-name>-->
-<!--        <url-pattern>*.js</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>default</servlet-name>-->
-<!--        <url-pattern>*.css</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>default</servlet-name>-->
+    <!--        <url-pattern>*.html</url-pattern>-->
+    <!--    </servlet-mapping>-->
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>default</servlet-name>-->
+    <!--        <url-pattern>*.js</url-pattern>-->
+    <!--    </servlet-mapping>-->
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>default</servlet-name>-->
+    <!--        <url-pattern>*.css</url-pattern>-->
+    <!--    </servlet-mapping>-->
 
     <servlet>
         <!-- 配置前端过滤器 -->
@@ -62,6 +62,11 @@
 
     <!--系统默认页面-->
     <welcome-file-list>
-        <welcome-file>login.html</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pages/404.html</location>
+    </error-page>
 </web-app>

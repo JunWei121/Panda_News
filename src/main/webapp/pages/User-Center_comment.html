@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>发布过的评论页</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-icons.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootbox.min.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="main-container container mt-40" id="main-container">
+    <section class="section" id="MyComments">
+        <div class="title-wrap">
+            <h1 class="section-title">您发表的评论</h1>
+        </div>
+
+
+    </section>
+</div>
+
+<script>
+    var app = {
+        init: function () {
+            $.get(getRootPath() + "/news/listMycomments.action", function (data) {
+                $.each(data, function (index, item) {
+                    $("#MyComments").append("<article><label>" + item.uname + "</label>\n" +
+                        "<p><b>" + item.cContent + "</b></p><i class=\"ui-date\">" + item.creleaseTime + "</i>\n"
+                        + " <div style=\"padding-left: 90%;\" class=\"btn-group\">\n" +
+                        "                <button class=\" btn-color\" type=\"button\" onclick='toDel(" + item.cid + ")'>删除</button>\n" +
+                        "            </div>" +
+                        "<hr/>\n" +
+                        "</article>")
+                })
+            });
+        }
+    };
+
+    app.init();
+    toDel = function (cid) {
+        $.get(getRootPath() + "/comment/deleteOne.action?cid=" + cid, function (data) {
+            if (data == "OK") {
+                bootbox.alert("删除成功！", function () {
+                    window.location.reload();
+                })
+            } else if (data == "FAIL") {
+                bootbox.alert("此评论不是您发表的！")
+            } else {
+                bootbox.alert("您还未登录！")
+            }
+        })
+    };
+
+    //获取项目url路径
+    function getRootPath() {
+        // 1、获取当前全路径，如： http://localhost:8080/springmvc/page/frame/test.html
+        var curWwwPath = window.location.href;
+        // 获取当前相对路径： /springmvc/page/frame/test.html
+        var pathName = window.location.pathname;    // 获取主机地址,如： http://localhost:8080
+        var local = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        // 获取带"/"的项目名，如：/springmvc
+        var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        var rootPath = local + projectName;
+        return rootPath;
+    }
+
+
+</script>
+</body>
+</html>
