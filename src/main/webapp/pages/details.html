@@ -1198,7 +1198,9 @@
             $("#comment").val(), function (data) {
             if (data == "OK") {
                 bootbox.alert("发表成功", function () {
-                    window.location.reload();
+                    $("#comment").val("");
+                    app.init();
+
                 });
             } else if (data == "FAIl") {
                 bootbox.alert("发表失败，请重试!")

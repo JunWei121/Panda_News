@@ -9,1519 +9,13 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/pages/User-Center_comment.html" line="34" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3f39c33-84e2-47cc-9752-c676eeb6ea01" name="Default Changelist" comment="完成前端和后端整合，前后端数据互通">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/utils/DateTimeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/utils/MD5Tools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/utils/NameUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/NewsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/SortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/SysUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/VerifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/CommentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/NewsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/NewsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/RoleDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/SortDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/SysUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/SysUserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/UserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/VerifyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/VerifyDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/News.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/Sort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/Verify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/OprCommentInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/OprNewsInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/OprSysInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/OprUserInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/SystemLoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/UserInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pojo/CommentResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pojo/NewsResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pojo/PageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pojo/UserResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pojo/VerifyResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/NewsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/SortService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/SysUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/VerifyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/NewsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/SortServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/VerifyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/houtai.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/commentManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/newsManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/sortManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sys/roleManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sys/sysUserManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/verifyManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-panda.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fileinput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bolditalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bolditalic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bolditalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-bolditalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/lato/lato-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/ui-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/ui-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/ui-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/news/ui-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/css/froala_editor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/img/old_clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/froala_editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/block_styles.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/char_counter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/colors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/file_upload.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/font_family.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/font_size.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/lists.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/media_manager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/tables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fulleditorPlugin/js/plugins/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/female.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/k6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/l1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/l2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/l3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/l4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/o1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/o2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r41.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r42.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/r43.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/s1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/s2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/s3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/s4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/t6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/test2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/text5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/y1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/y2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/y3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/y4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/熊猫人2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/熊猫头.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/images/熊猫眼睛.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/1527574860578784.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/1561794707163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/20180626064402269.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/2cf5e0fe9925bc31f9ca8b2e74d681b4ca1370fb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/456456456.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/4567.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/7890.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/SSS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/54fbbe53a227a84d1360e328941e60df.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/6070397_20151116164525.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/author_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/carousel_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/carousel_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/carousel_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/comment_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/comment_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/comment_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/editors_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_grid_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_grid_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_grid_slide_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_grid_slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_grid_slide_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/featured_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/grid_post_img_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/hot2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/hot3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/hot4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/int1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/int2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/int3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/int4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/list_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/list_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/list_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/maci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/new3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/new4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/placeholder_125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/placeholder_300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/placeholder_leaderboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/r41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/r42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/r43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/review_post_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/review_post_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/review_post_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/review_post_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/shijibei.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/single_post_featured_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/single_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/t1plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/test1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/theone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/ti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/timg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/u=1970086360,1836715149&amp;fm=214&amp;gp=0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y3plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/blog/y42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/d52a2834349b033b72ee7ba263f332d6d539bd22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/f31fbe096b63f6247569f1c9a74de7fd1b4ca3d6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/jinchengwu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/liudehua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/logo_mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/miui4jpeg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/nZWv-heirxyf4606956.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/niahuihan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/nishuihan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/nishuihan3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/niui2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/tuerqi1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/tuerqi2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/tuerqi3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/tuerqi4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/tuerqi5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/woerwo1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/woerwo2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/woerwo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/img/zhangaijia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/lmjimg/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/lmjimg/gif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/lmjimg/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/lmjimg/lYPJ-hencxtu1150171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/news/lmjimg/ykCd-heirxyf5011435.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/rights.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/fileinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/fileinput_locale_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/bootbox.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/checkCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.appear.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.bootstrap.newsbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.bootstrap.newsbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/jquery.newsTicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/lazysizes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/loginindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/loginjquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/owl-carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/news/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/User-Center_comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/User-Center_news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/fileinput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/fileinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/fileinput_locale_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/bootstrap.60.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/font-awesome.4.6.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/font-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/loginstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/reg.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/editAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/bootstrapValidator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/commonCopy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/flat-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/jquery.nouislider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/jquery.nouislider.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endcss/slide.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/captchaCode.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_card_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_change.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_change_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_char.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_char_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_chara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_chara_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_house_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_rule.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_rule_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_source.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_source_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/icon_user_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endimages/progress02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/html5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/jquery-1.10.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/jquery.nouislider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/jquery.nouislider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/endjs/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bolditalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bolditalic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bolditalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-bolditalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/lato/lato-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/ui-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/ui-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/ui-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fonts/ui-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/css/froala_editor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/img/old_clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/froala_editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/block_styles.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/char_counter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/colors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/file_upload.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/font_family.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/font_size.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/lists.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/media_manager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/tables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/fulleditorPlugin/js/plugins/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/k6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/l1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/l2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/l3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/l4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/o1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/o2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r41.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r42.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/r43.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/s1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/s2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/s3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/s4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/t6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/test2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/text5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/y1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/y2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/y3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/y4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/熊猫人2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/熊猫头.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/熊猫眼睛.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/1527574860578784.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/1561794707163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/20180626064402269.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/2cf5e0fe9925bc31f9ca8b2e74d681b4ca1370fb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/456456456.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/4567.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/7890.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/SSS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/54fbbe53a227a84d1360e328941e60df.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/6070397_20151116164525.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/author_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/carousel_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/carousel_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/carousel_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/comment_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/comment_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/comment_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/editors_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_grid_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_grid_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_grid_slide_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_grid_slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_grid_slide_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/featured_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/grid_post_img_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/hot2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/hot3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/hot4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/int1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/int2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/int3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/int4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/list_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/list_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/list_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/maci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/new3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/new4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/placeholder_125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/placeholder_300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/placeholder_leaderboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/r41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/r42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/r43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/review_post_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/review_post_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/review_post_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/review_post_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/shijibei.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/single_post_featured_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/single_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/t1plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/test1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/theone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/ti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/timg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/u=1970086360,1836715149&amp;fm=214&amp;gp=0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y3plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/blog/y42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/d52a2834349b033b72ee7ba263f332d6d539bd22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/f31fbe096b63f6247569f1c9a74de7fd1b4ca3d6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/jinchengwu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/liudehua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/logo_mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/miui4jpeg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/nZWv-heirxyf4606956.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/niahuihan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/nishuihan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/nishuihan3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/niui2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/tuerqi1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/tuerqi2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/tuerqi3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/tuerqi4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/tuerqi5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/woerwo1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/woerwo2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/woerwo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/zhangaijia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootbox.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/checkCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/isLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.appear.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.bootstrap.newsbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.bootstrap.newsbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/jquery.newsTicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/lazysizes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/loginindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/loginjquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/owl-carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/twitterFetcher_min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/latest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/lmjimg/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/lmjimg/gif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/lmjimg/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/lmjimg/lYPJ-hencxtu1150171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/lmjimg/ykCd-heirxyf5011435.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/loginimages/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/loginimages/tick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/loginindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/release.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/css/style1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/images/1680_1050_201605220350453593303.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/images/image-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/images/img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/images/social.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/images/u=596644002,4115023826&amp;fm=26&amp;gp=0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/userCenter/user-Center.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/crm.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/common/utils/DateTimeUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/common/utils/MD5Tools.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/common/utils/NameUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/CommentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/NewsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/RoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/SortController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/SysUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/VerifyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/CommentDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/NewsDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/RoleDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/SortDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/SysUserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/VerifyDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/Comment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/News.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/Sort.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/SysUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/Verify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/OprCommentInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/OprNewsInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/OprSysInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/OprUserInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/SystemLoginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/interceptor/UserInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/pojo/CommentResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/pojo/NewsResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/pojo/PageResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/pojo/UserResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/pojo/VerifyResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/CommentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/NewsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/RoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/SortService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/SysUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/VerifyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/SortServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/VerifyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/META-INF/crm.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/common/utils/DateTimeUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/common/utils/MD5Tools.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/common/utils/NameUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/CommentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/NewsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/RoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/SortController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/SysUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/VerifyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/CommentDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/CommentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/NewsDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/NewsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/RoleDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/RoleDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/SortDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/SysUserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/SysUserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/UserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/VerifyDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/VerifyDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/Comment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/News.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/Sort.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/SysUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/Verify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/OprCommentInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/OprNewsInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/OprSysInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/OprUserInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/SystemLoginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/interceptor/UserInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/pojo/CommentResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/pojo/NewsResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/pojo/PageResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/pojo/UserResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/pojo/VerifyResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/CommentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/NewsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/RoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/SortService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/SysUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/VerifyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/SortServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/VerifyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/lib/el-api-2.1.2-b05.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/lib/javax.servlet-3.0-b70.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/lib/jsp-api-2.1.3-b06.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/houtai.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/info/commentManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/info/newsManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/info/sortManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/sys/roleManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/sys/sysUserManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/user/userManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/user/verifyManger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/bootstrap-panda.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/bootstrap.dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/fileinput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bolditalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bolditalic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bolditalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-bolditalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/lato/lato-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/ui-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/ui-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/ui-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fonts/news/ui-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/css/froala_editor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/img/old_clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/froala_editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/block_styles.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/char_counter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/colors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/file_upload.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/font_family.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/font_size.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/lists.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/media_manager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/tables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/fulleditorPlugin/js/plugins/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/female.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/head/upload/0001_2019070716522507.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/head/upload/0002_2019070720214707.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/head/upload/0029_2019070704232207.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/head/upload/0029_2019070717011907.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/head/upload/0029_2019070808582007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/k6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/l1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/l2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/l3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/l4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/o1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/o2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r41.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r42.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/r43.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/s1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/s2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/s3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/s4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/t6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/test2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/text5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/y1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/y2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/y3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/y4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/熊猫人2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/熊猫头.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/images/熊猫眼睛.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/1527574860578784.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/1561794707163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/20180626064402269.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/2cf5e0fe9925bc31f9ca8b2e74d681b4ca1370fb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/456456456.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/4567.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/7890.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/SSS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/54fbbe53a227a84d1360e328941e60df.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/6070397_20151116164525.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/author_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/carousel_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/carousel_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/carousel_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/comment_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/comment_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/comment_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/editors_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_grid_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_grid_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_grid_slide_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_grid_slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_grid_slide_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/featured_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/grid_post_img_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/hot2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/hot3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/hot4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/int1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/int2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/int3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/int4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/list_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/list_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/list_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/maci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/new3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/new4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/placeholder_125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/placeholder_300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/placeholder_leaderboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/r41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/r42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/r43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/review_post_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/review_post_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/review_post_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/review_post_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/shijibei.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/single_post_featured_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/single_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/t1plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/test1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/theone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/ti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/timg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/u=1970086360,1836715149&amp;fm=214&amp;gp=0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y3plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/blog/y42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/d52a2834349b033b72ee7ba263f332d6d539bd22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/f31fbe096b63f6247569f1c9a74de7fd1b4ca3d6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/jinchengwu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/liudehua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/logo_mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/miui4jpeg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/nZWv-heirxyf4606956.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/niahuihan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/nishuihan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/nishuihan3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/niui2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/tuerqi1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/tuerqi2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/tuerqi3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/tuerqi4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/tuerqi5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/woerwo1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/woerwo2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/woerwo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/img/zhangaijia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/lmjimg/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/lmjimg/gif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/lmjimg/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/lmjimg/lYPJ-hencxtu1150171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/images/news/lmjimg/ykCd-heirxyf5011435.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/fileinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/fileinput_locale_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/bootbox.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/checkCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.appear.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.bootstrap.newsbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.bootstrap.newsbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/jquery.newsTicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/lazysizes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/loginindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/loginjquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/owl-carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/news/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/User-Center_comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/User-Center_news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/fileinput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/fileinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/bootstrap/js/fileinput_locale_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/bootstrap.60.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/font-awesome.4.6.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/font-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/loginstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/reg.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/editAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/bootstrapValidator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/commonCopy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/flat-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/jquery.nouislider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/jquery.nouislider.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endcss/slide.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/captchaCode.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_card_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_change.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_change_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_char.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_char_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_chara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_chara_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_house_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_rule.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_rule_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_source.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_source_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/icon_user_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endimages/progress02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/html5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/jquery-1.10.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/jquery.nouislider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/jquery.nouislider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/endjs/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bolditalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bolditalic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bolditalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-bolditalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/lato/lato-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/ui-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/ui-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/ui-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fonts/ui-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/css/froala_editor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/img/old_clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/froala_editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/block_styles.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/char_counter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/colors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/file_upload.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/font_family.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/font_size.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/lists.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/media_manager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/tables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/fulleditorPlugin/js/plugins/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/k6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/l1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/l2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/l3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/l4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/o1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/o2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r41.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r42.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/r43.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/s1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/s2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/s3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/s4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/t6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/test2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/text5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/y1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/y2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/y3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/y4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/熊猫人2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/熊猫头.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/images/熊猫眼睛.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/1527574860578784.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/1561794707163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/20180626064402269.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/2cf5e0fe9925bc31f9ca8b2e74d681b4ca1370fb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/456456456.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/4567.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/7890.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/SSS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/54fbbe53a227a84d1360e328941e60df.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/6070397_20151116164525.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/author_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/carousel_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/carousel_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/carousel_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/comment_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/comment_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/comment_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/editors_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_grid_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_grid_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_grid_slide_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_grid_slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_grid_slide_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/featured_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/grid_post_img_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/hot2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/hot3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/hot4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/int1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/int2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/int3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/int4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/k42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/l31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/list_post_img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/list_post_img_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/list_post_img_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/maci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/new3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/new4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/placeholder_125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/placeholder_300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/placeholder_leaderboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/r11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/r41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/r42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/r43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/review_post_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/review_post_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/review_post_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/review_post_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/s31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/shijibei.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/single_post_featured_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/single_post_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/t1plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/test1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/theone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/ti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/timg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/u=1970086360,1836715149&amp;fm=214&amp;gp=0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y3plus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/blog/y42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/d52a2834349b033b72ee7ba263f332d6d539bd22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/f31fbe096b63f6247569f1c9a74de7fd1b4ca3d6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/jinchengwu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/liudehua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/logo_mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/miui4jpeg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/nZWv-heirxyf4606956.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/niahuihan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/nishuihan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/nishuihan3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/niui2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/tuerqi1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/tuerqi2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/tuerqi3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/tuerqi4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/tuerqi5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/woerwo1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/woerwo2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/woerwo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/img/zhangaijia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootbox.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/checkCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/isLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.appear.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.bootstrap.newsbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.bootstrap.newsbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/jquery.newsTicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/lazysizes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/loginindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/loginjquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/owl-carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/js/twitterFetcher_min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/latest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/lmjimg/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/lmjimg/gif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/lmjimg/hot1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/lmjimg/lYPJ-hencxtu1150171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/lmjimg/ykCd-heirxyf5011435.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/loginimages/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/loginimages/tick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/loginindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/release.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/css/style1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/images/1680_1050_201605220350453593303.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/images/image-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/images/img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/images/social.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/images/u=596644002,4115023826&amp;fm=26&amp;gp=0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/crm/pages/userCenter/user-Center.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/TestTools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/json/navMenu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/json/navMenu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/json/role.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/json/role.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/houtai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/houtai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/iframe1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/pages/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/demo/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/springmvc-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/json/navMenu.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/json/navMenu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/json/role.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/json/role.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/pages/houtai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/pages/houtai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/pages/iframe1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/crm/pages/user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestBase.class" afterDir="false" />
+    <list default="true" id="a3f39c33-84e2-47cc-9752-c676eeb6ea01" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/panda.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/img/miui1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/crm/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/crm/pages/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1537,18 +31,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/editAdmin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7630">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/newsManger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3325">
+            <state>
               <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
             </state>
           </provider>
@@ -1575,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5788">
+            <state relative-caret-position="4528">
               <caret line="215" selection-start-line="215" selection-end-line="215" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1584,25 +69,25 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="1191" column="6" lean-forward="true" selection-start-line="1191" selection-start-column="6" selection-end-line="1191" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15715">
-              <caret line="415" column="37" lean-forward="true" selection-start-line="415" selection-start-column="37" selection-end-line="415" selection-end-column="37" />
+            <state relative-caret-position="4638">
+              <caret line="1006" column="66" lean-forward="true" selection-start-line="1006" selection-start-column="66" selection-end-line="1006" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#5;n#aside#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -1650,11 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>登录</find>
-      <find>islog</find>
-      <find>isLosin</find>
-      <find>isLog</find>
-      <find>fonts.</find>
       <find>googleapis</find>
       <find>fonts.googleapis</find>
       <find>ss.html</find>
@@ -1680,6 +160,11 @@
       <find>title</find>
       <find>1.10</find>
       <find>details.html?newId=</find>
+      <find>沃尔沃</find>
+      <find>访华</find>
+      <find>miui</find>
+      <find>逆水寒</find>
+      <find>发表</find>
     </findStrings>
     <replaceStrings>
       <replace>uname</replace>
@@ -1745,7 +230,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/dao/NewsDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/dao/CommentDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/details.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/service/impl/CommentServiceImpl.java" />
@@ -1764,8 +248,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/newsManger.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/editAdmin.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/edit.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/details.html" />
       </list>
     </option>
   </component>
@@ -1827,29 +312,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="crm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -1865,7 +327,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doc" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -1882,11 +344,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.demo.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\crm\src\main\webapp\WEB-INF" />
-      <recent name="D:\workspace\crm\src\main\webapp" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\crm\doc" />
+      <recent name="D:\workspace\crm\src\main\webapp\pages\img" />
       <recent name="D:\workspace\crm\src\main\webapp\pages" />
-      <recent name="D:\workspace\crm\src\test\java\dao" />
+      <recent name="D:\workspace\crm\src\main\webapp\pages\bootstrap\js" />
+      <recent name="D:\workspace\crm\src\main\webapp\pages\userCenter\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.demo.interceptor" />
@@ -1895,15 +361,11 @@
       <recent name="com.demo.dao" />
       <recent name="com.demo.service.impl" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\crm\src\main\webapp\WEB-INF" />
+      <recent name="D:\workspace\crm\src\main\webapp" />
       <recent name="D:\workspace\crm\src\main\webapp\pages" />
-      <recent name="D:\workspace\crm\src\main\webapp\pages\bootstrap\js" />
-      <recent name="D:\workspace\crm\src\main\webapp\pages\userCenter\images" />
-      <recent name="D:\workspace\crm\src\main\webapp\pages\endjs" />
-      <recent name="D:\workspace\crm\src\main\webapp\pages\css" />
+      <recent name="D:\workspace\crm\src\test\java\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2172,7 +634,7 @@
       <workItem from="1562515573811" duration="962000" />
       <workItem from="1562516569568" duration="6099000" />
       <workItem from="1562522716883" duration="2675000" />
-      <workItem from="1562546754506" duration="2234000" />
+      <workItem from="1562546754506" duration="6428000" />
     </task>
     <task id="LOCAL-00001" summary="新增了文件">
       <created>1561604794979</created>
@@ -2181,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561604794979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成前端和后端整合，前后端数据互通">
+      <created>1562552248203</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562552248203</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2217,7 +686,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321974000" />
+    <option name="totallyTimeSpent" value="326168000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -2229,7 +698,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1050" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.18890075" />
@@ -2251,7 +720,7 @@
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295711" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010672" side_tool="true" weight="0.6489842" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010672" side_tool="true" weight="0.66478556" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.31715575" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295711" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -2321,19 +790,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/bootstrap/js/fileinput.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6265">
@@ -2573,13 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40285">
-          <caret line="1151" column="5" selection-start-line="1151" selection-start-column="5" selection-end-line="1151" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/service/NewsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -2632,7 +1081,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/info/newsManger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
+        <state>
           <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
         </state>
       </provider>
@@ -2672,20 +1121,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/edit.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5788">
-          <caret line="215" selection-start-line="215" selection-end-line="215" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/img/nishuihan3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/img/niui2.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15715">
-          <caret line="415" column="37" lean-forward="true" selection-start-line="415" selection-start-column="37" selection-end-line="415" selection-end-column="37" />
+        <state relative-caret-position="4638">
+          <caret line="1006" column="66" lean-forward="true" selection-start-line="1006" selection-start-column="66" selection-end-line="1006" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2694,10 +1146,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        <state relative-caret-position="4528">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/panda.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="1191" column="6" lean-forward="true" selection-start-line="1191" selection-start-column="6" selection-end-line="1191" selection-end-column="6" />
         </state>
       </provider>
     </entry>
