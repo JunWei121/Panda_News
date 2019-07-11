@@ -1,4 +1,14 @@
 # Panda_News
+效果展示：
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/1.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/2.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/3.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/4.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/5.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/6.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/7.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/8.png)
+![image](https://github.com/ShoutBeast/Panda_News/blob/master/doc/9.png)
 实训项目 SSM + Maven + Bootstrap 实现新闻网站(包括前台后台)  纯html 前后端分离
 
 项目首页已配置好，启动项目默认进入。
