@@ -1981,7 +1981,7 @@
                                     <a href="#">客服中心</a>
                                 </li>
                                 <li>
-                                    <a href="http://localhost:8080/crm_war_exploded/sys/admin.action">后台登入</a>
+                                    <a href="#" onclick="return toAdmin();">后台登入</a>
                                 </li>
                             </ul>
                         </div>
@@ -2090,6 +2090,11 @@
     };
 
     app.init();
+
+    toAdmin = function () {
+        window.location.href= getRootPath() + "/sys/admin.action";
+        return false;
+    }
 </script>
 
 </body>
